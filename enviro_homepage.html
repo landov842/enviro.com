@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Home</title>
+    	<style>
+    		.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+			.navigation a {color:black;}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.table_odd {background-color:rgba(0,255,255,0.2);}
+			.table_even {background-color:rgba(0,255,25,0.2);}
+			.table_odd td {text-align:left; padding:10px;}
+			.table_even td {text-align:right; padding:10px;}
+			.table_odd a {color:blue;}
+			.table_even a {color:blue;}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+    	</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>OUR MISSION:</h2>
+				<p>To spark awareness and action by making environmental issues relatable and solution accessible. We believe informed communities are the foundation of a sustainable future.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<table class="table_odd">
+			<tr>
+				<td rowspan="2" class="table_image">
+					<img src="water_pollution.jpg" alt="Image Here">
+				</td>
+				<th>
+					Environmental Problems
+				</th>
+			</tr>
+			<tr>
+				<td>
+					There are many problems in the environment that need to be addressed. From climate change to pollution, the planet faces interconnected challenges. In our Environmental Problems section, you can learn more about the science, causes, and consequences behind today's most pressing issues.<br><a href="enviro_environmental_problems.html">Quick Link to Environmental Problems</a>
+					<br><small>Image courtesy of <a href="https://quench.culligan.com/blog/facts-about-water-pollution/">quench.culligan.com</a>
+				</td>
+			</tr>
+		</table>
+		<table class="table_even">
+			<tr>
+				<th>
+					Myth v. Reality
+				</th>
+				<td rowspan="2" class="table_image">
+					<img src="recycling_myth_v_reality.jpg" alt="Image Here">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Not everything you've heard about the environment is true. In our Myth v. Reality section, we debunk common misconceptions with facts because understanding the truth and telling fact from fiction is the first step towards meaningful change.<br><a href="enviro_myth_v_reality.html">Quick Link to Myth v. Reality</a>
+				</td>
+			</tr>
+		</table>
+		<table class="table_odd">
+			<tr>
+				<td rowspan="2" class="table_image">
+					<img src="wind_turbines.jpg" alt="Image Here">
+				</td>
+				<th>
+					Big Solutions (What The World Can Do)
+				</th>
+			</tr>
+			<tr>
+				<td>
+					Despite there being many problems with the environment, there are many solutions to these problems. The prolems are big, but the solutions are bigger. Discover the technologies and policies that are reshaping how we interact with our environment for the better.<br><a href="enviro_big_solutions.html">Quick Link to Big Solutions</a>
+				</td>
+			</tr>
+		</table>
+		<table class="table_even">
+			<tr>
+				<th>
+					Small Solutions (What You Can Do)
+				</th>
+				<td rowspan="2" class="table_image">
+					<img src="compost.jpg" alt="Image Here">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Many solutions to environmental problems may seem giant to one person, but you can still make choices to help better the environment. Every action, no matter how small, matters. Our Small Solutions section offers practical steps that you can take to reduce your harmful impact on the environment and inspire others to join the movement.<br><a href="enviro_small_solutions.html">Quick Link to Small Solutions</a>
+				</td>
+			</tr>
+		</table>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

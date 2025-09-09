@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Agriculture</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(255,25,0,0.2);
+			}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.article a {color:blue;}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_homepage_tweaked.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_environmental_problems.html">Environmental Problems</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste.html">Waste</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation.html">Deforestation</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing.html">Greenwashing</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_protecting_forests.html">Protecting Forests</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure.html">Green Infrastructure</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy.html">Renewable Energy</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution_quiz.html">Pollution Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Changing Agriculture and Fishing</h2>
+				<p>Agriculture and fishing provide our planet with food, but a lot of the tactics used by farming companies are unsustainable. This article will guide you on what problems our current methods of agriculture cause and proper solutions to them.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<h2>What Problems Do Agriculture and Fishing Cause?</h2>
+			<p>Agriculture and fishing are threats to wildlife and our environment. Hazardous tactics common in the livestock industry result in the deaths of countless wild animals, wasting of water, and exacerbating climate change.</p>
+			<h3>Killing and Endangering Wild Species</h3>
+			<p>One of the harmful actions livestock companies is the killing of native species. Livestock companies, through the USDA's program Wildlife Services, kills millions of wild animals every year to make space for farm animals. Such carnage has led to some species being critically endangered. One example is the Mexican wolf, a species native to North America. The Mexican wolf was a species that fell victim to the Wildlife Services' bloodshed from 1915 to 1972 (Center For Biological Diversity). The consequence of such violence was catastrophic: according to the Center for Biological Diversity, as of January 2015, only about 110 Mexican wolves remain in the wild. Because of this, the species has gained endagered species protection. However, the livestock industry has lobbied the government to finish the species off for good to keep their profits safe. Regulating the meat industry by protecting these endangered animals will such bloodshed from happening again.</p>
+			<h3>Pollution and Climate Change</h3>
+			<p>Meat production has also resulted in significant greenhouse gas emissions. Methane, a greenhouse gas that is 86 more times potent than carbon dioxide, is one of the by-products resulting from raising cattle. In fact, the Center for Biological Diversity estimates that 5.5 million metric tons of methane are emitted by cattle in the United States. This has supercharged the effects of climate change, resulting in a huge threat to species around the world. Regulating agriculture will help lower down the green house gas emissions that producing meat causes. Tactics commonly used in agriculture are also large pollutors. For instance, slashing and burning, a tactic where forests and land are burned, releases large amounts of carbon dioxide into the atmosphere, <q>as the carbon stored in intact forests is released when they are cut or burned</q> (World Wildlife Fund). Gasoline-powered machinery is also causing more carbon dioxide to go into the air. Furthermore, fertilizer used for crops can also get into streams and waterways, contaminating the water and harming aquatic life. Changing agricultural tactics are necessary to mitigate pollution.</p>
+			<h3>Habitat Loss</h3>
+			<p>The raising of livestock has also resulted in significant habitat loss. Large areas of land are required to raise cattle and other farm animals. In fact, the Center for Biological Diversity estimates that 50% of all land use is devoted to agriculture, and 80% of that land for farm animals and their feed crops. Since raising livestock requires a lot of land, livestock companies obtain more land to raise cattle by wrecking habitats throughout the country. For example, the American bison has lost significant portions of its native habitat: specifically, <q>the North American habitat for wild bison is now lesss than 1% of their historic range[, and] almost all of the bison's former range has been taken over by the meat industry or urban development.</q> (Center for Biological Diversity) Regulating agriculture will be vital to prevent the meat industry from continuing to kick out innocent animals for their own profit.</p>
+			<h3>Pesticides</h3>
+			<p>One other big problem caused by the meat industry is the intense use of pesticides. In fact, the Center for Biological Diversity estimates that <q>meat production is responsible for 37% of all pesticide use in the United States.</q> Most of the pesticides are used when growing feed crops, like corn or soy. These pesticides can jeopardize the survival of many species, one of which being the monarch butterfly. A once common species, monarch butterflies are dwindling in numbers after milkweed, the monarch butterfly's only food source, was nearly eradicated by pesticides.</p>
+			<h2>What Should We Do?</h2>
+			<p>There are many problems at hand in our current methods of agricultures. However, there are still ways to decrease agriculture's harm on the environment.</p>
+			<h3>Integrated Pest Management (IPM) Techniques</h3>
+			<p>Integrated pest management, or IPM, is a pest control technique that aims to control pests in an eco-friendly way. Rather than relying on extensive pesticide use, IPM aims to control pests while harming the natural environment as little as possible. According to Wikipeida, IPM systems use six components:
+				<ul>
+					<li>Acceptable pest levels: Rather than prioritizing on eradicating an entire species of pest, IPM aims to keep pests low but still allows pests to be present at low numbers. This is more effective than attemtping to wipe out the entire population, as eradication is not only difficult, but it increases the pressure put on pests to develop resistance.</li>
+					<li>Preventive cultural practices: IPM utilizes biology to help regulate pests. This includes selecting a crop best suited to the climate of the growing area and adding beneficial microorganisms to the soil to act as an alternative to fungicides.</li>
+					<li>Monitoring: Regular observation is necessary in order to detect pest behavior and when they might surge in numbers.</li>
+					<li>Mechanical control: If there are too many pests, methods such as barriers, traps, or vacuuming are sued to disrupt breeding.</li>
+					<li>Biological control: Natural processes are also utilized to control pest populations. This includes using biological insecticides from microorganisms or insects that eat the pests.</li>
+					<li>Responsible use: Synthetic pesticides may be necessary from time to time, but the application process will be tailored to their targets to prevent collateral damage and lower pesticide use.</li>
+				</ul></p>
+			<p>Through the use of these six components and careful deliberation, IPM maintains control of pests while lowering environmental consequences.</p>
+			<h3>Agroforestry</h3>
+			<p>Another sustainable agricultural tactic is agroforestry, where trees and shrubs are grown alongside crops and livestock, according to Brittanica. Aiming to expand biodiversity, agroforestry is a practical and relatively cheap method to reduce the environmental impact of agriculture. According to Brittanica, the tactic utilizes a variety of methods, including:
+				<ul>
+					<li>Upland buffers&mdash;stirps of trees, shrubs, and grasses planted and managed together</li>
+					<li>Windbreaks&mdash;trees planted to act as barriers to lower wind speed in a farm</li>
+					<li>Alley cropping&mdash;trees planted in multiple rows with crops between the tree rows</li>
+					<li>Forest farming&mdash;growing crops under a forest overstory that provides an appropriate microclimate</li>
+				</ul></p>
+			<p>Agroforestry has a variety of benefits for the environment. According to Brittanica, they can <q>yield proven strategies for long-term carbon sequestration, soil enrichment, biodiversity conservation, air and water quality improvements.</q> Furhtermore, agroforestry can utiltize interactions between species to enhance yield and capture water. Agroforestry has the ability to offer both enivronmental and economic benefits.</p>
+			<h3>Crop Rotation</h3>
+			<p>Another simpler alternative is crop rotation. Crop rotation is growing different crops in the same area throughout the year, as opposed to monocropping, farming the same crop for several years. While monocropping depletes nutrients in the soil and encourages growth of the population that feeds on the farmed crop, crop rotation can reduce the need for fertilizers, lower the amount of pests present, and increase biodiversity. The benefits can be enhanced by adding multiple crops to the same rotation or introducing livestock. Specifically, according to Wikipedia, the benefits associated with crop rotation include:
+				<ul>
+					<li>Carbon sequestration&mdash;adds carbon dioxide from the air into the soil</li>
+					<li>Nitrogen fixing&mdash;if legumes are used in the rotations</li>
+					<li>Pathogen and pest control&mdash;interrrupt pest habitats and life cycles</li>
+					<li>Reduces soil erosion</li>
+					<li>Increases biodiversity</li>
+				</ul></p>
+			<h3>No-Till Farming</h3>
+			<p>No-till farming has also increased. As the name implies, no-till farming is farming without the use of tillage&mdash;preparing farm soil for growing plants through methods such as shoveling, hoeing, raking, and ploughing. No-till farming has many benefits, including:
+				<ul>
+					<li>Reduces fuel consumption. Tilling requires fuel, as the machines needed to mix the soil run on gas. As a result, no-till significantly reduces gas consumption. The USDA estimates that conventional tilling requires more than six gallons of gas an acre whereas no-till needs less than two. This decrease in gas consumption saves money and reduces carbon emissions. (USDA)</li>
+					<li>Saves time. Tilling also requires a decent amount of time, so no-till allows that precious time to be applied elsewhere. (USDA)</li>
+					<li>Reduces soil erosion. Since no-till disturbs very little soil, the soil is less likely to be blown or washed away. (NCB)</li>
+					<li>Promotes biodiversity. No-till preserves many of the bacteria, insects, and other organisms living in healthy soil. (NCB)</li>
+				</ul></p>
+			<p>References: <a href="https://takeextinctionoffyourplate.com/how-meat-harms-wildlife">Center for Biological Diversity</a>, <a href="https://www.worldwildlife.org/industries/sustainable-agriculture">World Wildlife Fund</a>, <a href="https://en.wikipedia.org/wiki/Integrated_pest_management">Wikipedia (IPM)</a>, <a href="https://www.britannica.com/science/agroforestry">Brittanica</a>, <a href="https://en.wikipedia.org/wiki/Crop_rotation#Implementation">Wikipedia (Crop Rotation)</a>, <a href='https://www.usda.gov/about-usda/news/blog/saving-money-time-and-soil-economics-no-till-farming'>USDA</a>, <a href="https://nebraskacorn.gov/cornstalk/corn101/what-is-no-till-farming-and-what-are-the-advantages/">Nebraska Corn Board (NCB)</a></p>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_homepage_tweaked.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution.html">Pollution</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste.html">Waste</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation.html">Deforestation</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Greenwashing Quiz</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(35,165,65,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_homepage_tweaked.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_environmental_problems.html">Environmental Problems</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste.html">Waste</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation.html">Deforestation</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing.html">Greenwashing</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_protecting_forests.html">Protecting Forests</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure.html">Green Infrastructure</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy.html">Renewable Energy</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution_quiz.html">Pollution Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Greenwashing Quiz</h2>
+				<p>Test your knowledge on greenwashing!<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<form>
+				<h3>Question #1: What is greenwashing?</h3>
+				<input type="radio" id="1A" name="Q1">
+				<label for="1A">Cleaning up polluted areas</label>
+				<br><input type="radio" id="1B" name="Q1">
+				<label for="1B">A way to improve solar panel efficiency</label>
+				<br><input type="radio" id="1C" name="Q1">
+				<label for="1C">Misleading marketing that exaggerates or lies about environmental benefits</label>
+				<br><input type="radio" id="1D" name="Q1">
+				<label for="1D">Recycling industrial waste</label>
+				<h3>Question #2: Which of the following is an example of greenwashing?</h3>
+				<input type="radio" id="2A" name="Q2">
+				<label for="2A">A company using certified eco-friendly packaging</label>
+				<br><input type="radio" id="2B" name="Q2">
+				<label for="2B">A company delivering on a promise of planting trees for each sale</label>
+				<br><input type="radio" id="2C" name="Q2">
+				<label for="2C">A brand claiming "100% natural" products without proof or certification</label>
+				<br><input type="radio" id="2D" name="Q2">
+				<label for="2D">A business actually investing in wind energy</label>
+				<h3>Question #3: Why is greenwashing a problem?</h3>
+				<input type="radio" id="3A" name="Q3">
+				<label for="3A">It increases competition</label>
+				<br><input type="radio" id="3B" name="Q3">
+				<label for="3B">It misleads consumers and delays action on environmental issues</label>
+				<br><input type="radio" id="3C" name="Q3">
+				<label for="3C">It eliminates fossil fuels</label>
+				<br><input type="radio" id="3D" name="Q3">
+				<label for="3D">It improves fossil durability</label>
+				<h3>Question #4: Which phrase is often used in greenwashing without any real regulation?</h3>
+				<input type="radio" id="4A" name="Q4">
+				<label for="4A">Energy Star certified</label>
+				<br><input type="radio" id="4B" name="Q4">
+				<label for="4B">USDA Organic</label>
+				<br><input type="radio" id="4C" name="Q4">
+				<label for="4C">Biodegradable in compost</label>
+				<br><input type="radio" id="4D" name="Q4">
+				<label for="4D">Eco-friendly or green</label>
+				<h3>Question #5: What does a third-party environemntal certification help with?</h3>
+				<input type="radio" id="5A" name="Q5">
+				<label for="5A">Lowering prices</label>
+				<br><input type="radio" id="5B" name="Q5">
+				<label for="5B">Verify sustainability claims</label>
+				<br><input type="radio" id="5C" name="Q5">
+				<label for="5C">Reduce innovation</label>
+				<br><input type="radio" id="5D" name="Q5">
+				<label for="5D">Lower demand</label>
+				<h3>Question #6: Which sector is especially known for greenwashing</h3>
+				<input type="radio" id="6A" name="Q6">
+				<label for="6A">Fashion</label>
+				<br><input type="radio" id="6B" name="Q6">
+				<label for="6B">Banking</label>
+				<br><input type="radio" id="6C" name="Q6">
+				<label for="6C">Sports</label>
+				<br><input type="radio" id="6D" name="Q6">
+				<label for="6D">Space exploration</label>
+				<h3>Question #7: What is one way to detect greenwashing?</h3>
+				<input type="radio" id="7A" name="Q7">
+				<label for="7A">Trust all advertisements</label>
+				<br><input type="radio" id="7B" name="Q7">
+				<label for="7B">Research company practices and certifications</label>
+				<br><input type="radio" id="7C" name="Q7">
+				<label for="7C">Avoid reading product labels</label>
+				<br><input type="radio" id="7D" name="Q7">
+				<label for="7D">Believe colorful packaging</label>
+				<h3>Question #8: What kind of imagery is often used in greenwashing?</h3>
+				<input type="radio" id="8A" name="Q8">
+				<label for="8A">Fire and heat</label>
+				<br><input type="radio" id="8B" name="Q8">
+				<label for="8B">Cityscapes</label>
+				<br><input type="radio" id="8C" name="Q8">
+				<label for="8C">Bold geometry</label>
+				<br><input type="radio" id="8D" name="Q8">
+				<label for="8D">Nature and forests</label>
+				<h3>Question #9: Which statement is a potential example of greenwashing?</h3>
+				<input type="radio" id="9A" name="Q9">
+				<label for="9A">"Made with love and nature"</label>
+				<br><input type="radio" id="9B" name="Q9">
+				<label for="9B">"Certified by Fair Trade USA"</label>
+				<br><input type="radio" id="9C" name="Q9">
+				<label for="9C">"Solar powered packaging" with technical details</label>
+				<br><input type="radio" id="9D" name="Q9">
+				<label for="9D">"Third-party verified and carbon neutral"</label>
+				<h3>Question #10: Why do companies greenwash?</h3>
+				<input type="radio" id="10A" name="Q10">
+				<label for="10A">To reduce production costs</label>
+				<br><input type="radio" id="10B" name="Q10">
+				<label for="10B">To attract environmentally conscious consumers</label>
+				<br><input type="radio" id="10C" name="Q10">
+				<label for="10C">To address health regulations</label>
+				<br><input type="radio" id="10D" name="Q10">
+				<label for="10D">To improve supply chain safety</label>
+				<h3>Question #11: What is a responsible action for combating greenwashing?</h3>
+				<input type="radio" id="11A" name="Q11">
+				<label for="11A">Support brands with verifiable green practices</label>
+				<br><input type="radio" id="11B" name="Q11">
+				<label for="11B">Ignore product labels</label>
+				<br><input type="radio" id="11C" name="Q11">
+				<label for="11C">Buy luxury goods</label>
+				<br><input type="radio" id="11D" name="Q11">
+				<label for="11D">Invest in biomass</label>
+				<h3>Question #12: What helps verify a company's sustainability claims?</h3>
+				<input type="radio" id="12A" name="Q12">
+				<label for="12A">Celebrity endorsement</label>
+				<br><input type="radio" id="12B" name="Q12">
+				<label for="12B">Unverified social media posts</label>
+				<br><input type="radio" id="12C" name="Q12">
+				<label for="12C">Third party certifications</label>
+				<br><input type="radio" id="12D" name="Q12">
+				<label for="12D">Eye-catching imagery</label>
+				<h3>Question #13: What is not a type of greenwashing?</h3>
+				<input type="radio" id="13A" name="Q13">
+				<label for="13A">Transparency on sustainability claims</label>
+				<br><input type="radio" id="13B" name="Q13">
+				<label for="13B">Trustworthy certifications</label>
+				<br><input type="radio" id="13C" name="Q13">
+				<label for="13C">Vague claims</label>
+				<br><input type="radio" id="13D" name="Q13">
+				<label for="13D">Misleading imagery</label>
+				<h3>Question #14: What kind of packaging labeled "biodegradable" would be considered greenwashed?</h3>
+				<input type="radio" id="14A" name="Q14">
+				<label for="14A">Plastic that only breaks down in extreme circumstances</label>
+				<br><input type="radio" id="14B" name="Q14">
+				<label for="14B">Recycled cardboard</label>
+				<br><input type="radio" id="14C" name="Q14">
+				<label for="14C">Certified compostable material</label>
+				<br><input type="radio" id="14D" name="Q14">
+				<label for="14D">Plastic that breaks down in a variety of scenarios</label>
+				<h3>Question #15: A product claims it is "natural". What is a good way to test this claim?</h3>
+				<input type="radio" id="15A" name="Q15">
+				<label for="15A">Smell the product</label>
+				<br><input type="radio" id="15B" name="Q15">
+				<label for="15B">Check for certifications</label>
+				<br><input type="radio" id="15C" name="Q15">
+				<label for="15C">Look at the price</label>
+				<br><input type="radio" id="15D" name="Q15">
+				<label for="15D">Look at imagery</label>
+				<h3>Question #16: Why are pictures of forests and wildlife sometimes suspicious in marketing?</h3>
+				<input type="radio" id="16A" name="Q16">
+				<label for="16A">They are soothing</label>
+				<br><input type="radio" id="16B" name="Q16">
+				<label for="16B">They attract animals</label>
+				<br><input type="radio" id="16C" name="Q16">
+				<label for="16C">They are mandated by law</label>
+				<br><input type="radio" id="16D" name="Q16">
+				<label for="16D">They create a false sense of eco-consciousness</label>
+				<h3>Question #17: What is "hidden trade-off" greenwashing?</h3>
+				<input type="radio" id="17A" name="Q17">
+				<label for="17A">Claiming sustainability while ignoring other harmful practices</label>
+				<br><input type="radio" id="17B" name="Q17">
+				<label for="17B">Refusing to sell eco-products</label>
+				<br><input type="radio" id="17C" name="Q17">
+				<label for="17C">Sharing productions secrets publicly</label>
+				<br><input type="radio" id="17D" name="Q17">
+				<label for="17D">Giving markups for the use of single-use plastics</label>
+				<h3>Question #18: A company that burns fossil fuels claims to be "carbon positive" without evidence. Is this greenwashing?</h3>
+				<input type="radio" id="18A" name="Q18">
+				<label for="18A">Yes</label>
+				<br><input type="radio" id="18B" name="Q18">
+				<label for="18B">No</label>
+				<h3>Question #19: You find an article of clothing that advertises a "sustainable collection" made from 10% recycled material. On the tag is a certification from Bluesign. Is this greenwashing?</h3>
+				<input type="radio" id="19A" name="Q19">
+				<label for="19A">Yes</label>
+				<br><input type="radio" id="19B" name="Q19">
+				<label for="19B">No</label>
+				<h3>Question #20: You are at the grocery store. You find a pack of water bottles labeled as "eco-safe". On the packaging, there are images of nature and "SUSTAINABLE" written in big letters. You also find a certification from the Legit Water Bottle Production Association, an unknown third party group you don't recognize. Is this greenwashing?</h3>
+				<input type="radio" id="20A" name="Q20">
+				<label for="20A">Yes</label>
+				<br><input type="radio" id="20B" name="Q20">
+				<label for="20B">No</label>
+				<h3>Question #21: An electronics brand uses green boxes and slogans such as "Earth first". What should you check next?</h3>
+				<input type="radio" id="21A" name="Q21">
+				<label for="21A">Whether the box has a description on how it is sustainable</label>
+				<br><input type="radio" id="21B" name="Q21">
+				<label for="21B">Whether if the font is bold</label>
+				<br><input type="radio" id="21C" name="Q21">
+				<label for="21C">How it smells</label>
+				<br><input type="radio" id="21D" name="Q21">
+				<label for="21D">If it makes noise</label>
+				<h3>Question #22: The company Lobismus made an announcement two weeks ago on Instagram that it has plans to half its carbon emissions in two years. However, you do some research, and you have found on Lobismus's website a detailed plan on how they are planning to cut emissions, and they have already finsihed the first few steps. Is Lobismus greenwashing?</h3>
+				<input type="radio" id="22A" name="Q22">
+				<label for="22A">Yes</label>
+				<br><input type="radio" id="22B" name="Q22">
+				<label for="22B">No</label>
+				<h3>Question #23: At the store, you find a wooden chair that you want to buy. You examine the labels, and they say that the wood was "sustainably produced", and there is a certification for the Forest Stewardship Council. Is the chair greenwashed?</h3>
+				<input type="radio" id="23A" name="Q23">
+				<label for="23A">Yes</label>
+				<br><input type="radio" id="23B" name="Q23">
+				<label for="23B">No</label>
+				<h3>Question #24: You find a plastic spatula with a label only reading "100% recycled plastic" without evidence or certifications to back it up. Is this greenwashing?</h3>
+				<input type="radio" id="24A" name="Q24">
+				<label for="24A">Yes</label>
+				<br><input type="radio" id="24B" name="Q24">
+				<label for="24B">No</label>
+				<h3>Question #25: What is not an example of greenwashing?</h3>
+				<input type="radio" id="25A" name="Q25">
+				<label for="25A">Untrustworthy certifications</label>
+				<br><input type="radio" id="25B" name="Q25">
+				<label for="25B">Vague language</label>
+				<br><input type="radio" id="25C" name="Q25">
+				<label for="25C">Deliberation on how a product is sustainable</label>
+				<br><input type="radio" id="25D" name="Q25">
+				<label for="25D">Exaggerated claims</label>
+			</form>
+			<button onclick='checkAnswer("output");'>Check My Answers</button>
+			<h3 id="output">Your results will display here.</h3>
+			<h3>Need some help? Click <a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing.html">here</a> to go back to the Greenwashing article, or click <a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_small_soultions.html#greenwashing">here</a> to go back to the Detecting Greenwashing Tips section.</h3>
+			<script>
+				function checkAnswer (output_location = "") {
+					const answer_key = [
+						"1C",
+						"2C",
+						"3B",
+						"4D",
+						"5B",
+						"6A",
+						"7B",
+						"8D",
+						"9A",
+						"10B",
+						"11A",
+						"12C",
+						"13A",
+						"14A",
+						"15B",
+						"16D",
+						"17A",
+						"18A",
+						"19B",
+						"20A",
+						"21A",
+						"22B",
+						"23B",
+						"24A",
+						"25C"
+					]; //answer_key holds the IDs of the buttons with the correct answers.
+					const answer_rationale = [
+						"Only Option C correctly defines greenwashing.",
+						"In Option C, the hypothetical company claims their products are sustainable without evidence, so that counts as greenwashing. In Option A, the product is certified to be eco-friendly, so it does not count as greenwashing. In Option B and D, the companies are actually investing in clean energy, so it wouldn't count as greenwashing, either.",
+						"Greenwashing misleads consumers, delaying action on environmental issues as companies could just greenwash instead of trying to make their products sustainable.",
+						"The terms eco-friendly or green have no concrete defintion, so it is easy for companies to use them as a form of greenwashing.",
+						"Third-party certifications act as evidence that their products are sustainable.",
+						"Fashion companies are the biggest greenwashers. For example, H&M has greenwashed by claiming that one of their new clothing lines, Conscious, was sustainable and made from recycled and organic materials, but luckily, the Norwegian Customer Authority noticed the misleading marketing <sup>[<a href='https://earth.org/greenwashing-companies-corporations/'>1</a>]</sup>.",
+						"Researching company practices can help determine if a company is greenwashing.",
+						"Imagery of nature and forests are used to dupe consumers into thinking the product was made with nature in mind.",
+						"\"Made with love and nature\" is a statement commonly used in greenwashing becuase it has no strict definition and is not used with evidence. Option B and D have certifications, so it is most likely not greenwashing, and Option C includes technical details on how the product is sustainable, so it is not greenwashing, either.",
+						"Companies greenwashing to attract environmentally conscious consumers through manipulation.",
+						"Supporting verified sustainable brands is the best option for preventing greenwashing, as it encourgaes companies to actually be sustainable.",
+						"Third-party certifications are useful for verifying that a product is sustainable.",
+						"Transparency is when a company is being more open on its tactics, so transparency on sustainability claims is when a company is open on how a product is sustainable. If a company is being open on how it is achieiving sustainability, then the company is not greenwahing.",
+						"Option A would be greenwashing, as a plastic that only breaks down in extreme scenarios being classified as biodegradable would be an exaggerated claim, a common form of greenwashing.",
+						"Certifications are the best way to verify sustainability claims.",
+						"Images of nature are used to create a false sense of eco-consciousness.",
+						"A hidden trade-off greenwashing highlights sustainability in one aspect while ignoring others. An example of this would be a bottle made from recycled plastics being manufactured in a water polluting, coal burning factory.",
+						"The claim would be considered greenwashing, as there is no evidence to back it up.",
+						"Bluesign is a third-party group that checks fashion brands for sustainability, so this statement would not be considered greenwashing.",
+						"While there is a certification, the certification is from the Legit Water Bottle Production Association, a fake group that doesn't exist, so the water bottles were greenwashed.",
+						"To verify the company's claims, look for descriptions on how it is sustainable.",
+						"Since Lobismus has both created and started their plan to achieve lowered carbon emissions, it does not count as greenwashing.",
+						"The Forest Stewardship Council is a third party group that verifies wood products for sustainability, so since the product has a certification from that group, it does not count as greenwashing.",
+						"Since the product's claim that it is made of 100% recycled plastic has no evidence to back it up, it is likely greenwashing.",
+						"Deliberation on how a product is sustainable acts as evidence on a product's sustainability, so this is not greenwashing. The other three options&mdash;untrustworthy certifications, vague language, and exaggerated claims&mdash;are all common forms of greenwashing."
+					];
+					var score = 0; //score holds the amount of correct answers.
+					var result = "Questions you got wrong: <ul>";
+
+					for (var i = 0; i < answer_key.length; i++) {
+						if (document.getElementById(answer_key[i]).checked) {
+							score++;
+						} else {
+							result = result + "<li>" + (i + 1) + ". The correct answer is " + answer_key[i].substring(answer_key[i].length - 1) + ". " + answer_rationale[i] + "</li>";
+						}
+					}
+
+					result = "You scored a " + score + " out of " + answer_key.length + ". " + result + "</ul>";
+					document.getElementById(output_location).innerHTML = result;
+				}
+			</script>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_homepage_tweaked.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution.html">Pollution</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste.html">Waste</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation.html">Deforestation</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

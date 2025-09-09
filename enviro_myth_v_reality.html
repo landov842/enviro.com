@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Myth v. Reality</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(0,255,25,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="fenviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Myth v. Reality</h2>
+				<p>Despite all the information in the Internet about the environment, there are many misconceptions and inaccuracies to find. Here, you can learn more on how to tell fact from fiction.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<h2>Myth: Cardboard and paper are always recyclable.</h2>
+			<p>It is true that many types of cardboard and paper are recyclable, but this is not always the case. Cardboard or paper contaminated with food may not be recyclable, as the food can complicate the recycling process and make the paper or cardboard impossible to be reused. Some types of paper or cardboard-based food packaging can be recycled, like pizza boxes, if the paper or cardboard is not fully soaked. However, items with food waste sitting inside or fully soaked material cannot be recycled. Other reasons why some cardboard or paper items may not be recyclable include: 
+				<ul>
+					<li>Plastic Content (&gt;1.5% of material)</li>
+					<li>Foil or Glitter</li>
+					<li>Adhesive</li>
+				</ul></p>
+			<p>Reference: <a href="https://cardboard.org.uk/news/when-recycling-falls-short/">Beyond the Box</a>
+			</p>
+			<h2>Myth: All plastic items are recyclable.</h2>
+			<p>While a variety of plastic objects are able to be recycled, some types of plastic items are not recyclable. One example is plastic that has food debris. If there are pieces of food on or in the plastic, it is not recyclable because the food might mess up the recycling process and render the plastic unable to be reused. Items like plastic utensils are also unrecyclable for the same reason. Another type of plastic items that cannot be recycled is those used to contain hazardous substances, as the plastic might still have the residue of the substance on it, which can result in the contamination of plastic. Some types of plastic items that are not recyclable include:
+				<ul>
+					<li>Building Materials</li>
+					<li>Dessert Trays</li>
+					<li>Disposable Cups and Other Tableware</li>
+					<li>Food Containers</li>
+					<li>LDPE&mdash;low-density polyethylene, a type of plastic resin&mdash;Packing Foam</li>
+					<li>Prescription and Medication Bottles</li>
+					<li>Plastic Tubes</li>
+				</ul></p>
+			<p>Reference: <a href="https://www.recyclespot.org/how-to-recycle/plastic/non-recyclable-plastics">recyclespot.org</a>
+			</p>
+			<h2>Myth: Recycling does not save energy.</h2>
+			<p>Recycling actually can save energy by reusing pre-existing materials instead of creating material from scratch. For example, to make aluminum from scratch, a mineral called bauxite is exposed to intensely high temperatures, a process that requires an immense amount of energy. On the other hand, recycling aluminum from used cans only requires a simple cleaning and re-melting. Recycling cans for aluminum is far more efficient: according to the EPA (obtained from the webpage linked below created by the University of Colorado), <q>recycling aluminum saves 95% of the energy needed to make a can from scratch.</q> Another example is the production of paper, where recycling paper saves both trees from being cutting down and water from being wasted.
+			<br>Reference: <a href="https://www.colorado.edu/ecenter/2022/04/26/debunking-recycling-myths">University of Colorado</a></p>
+			<h2>Myth: Everything will decompose over time.</h2>
+			<p>Contrary to many might think, not everything decomposes over time. Unlike most other materials, plastic does NOT decompose. Instead, plastic only breaks up into tinier and tinier pieces until it becomes microplastics, pieces of plastic so small that you need a microscope to see them. Despite being so small, microplastics are still dangerous. Microplastics are small enough to be found in the air. One study found that annually, a person breathes in 53,700 particles of microplastic. Not only are they found in our air, but they are also found in our water and our food.
+			<br>Reference: <a href="https://www.colorado.edu/ecenter/2022/04/26/debunking-recycling-myths">University of Colorado</a></p>
+			<h2>Myth: A product that is labeled as "eco-friendly" means it is environmentally friendly.</h2>
+			<p>Despite what you may think, a label claiming that a product is eco-friendly doesn't automatically make the product sustainable. In reality, this is a type of greenwashing&mdash;<q>when a company purposely deceives the customer with misleading information, images, or diction that claims the product is good for the environment when it is not</q> (University of Colorado). In other words, companies will label their products as "eco-friendly" without proof to make their product seem more sustainable in order to win over more consumers. However, this only delays actual change in manufacturing, as well as other side effects&mdash;to learn more about the harms of greenwashing, click <a href="fenviro_greenwashing.html">here</a>.
+			<br>References: <a href="https://www.colorado.edu/ecenter/2022/04/26/debunking-recycling-myths">University of Colorado</a></p>
+			<h2>Myth: Compostable plastics can be recycled.</h2>
+			<p>Unfortunately, compostable plastics cannot be recycled, as they are not intended for being recycled. Compostable plastics are <q>made of renewable materials such as corn, starches, cellulose, water, and biomass</q>&mdash;materials that can contaminate non-compostable plastics and leave them unable to be recycled (University of Colorado). To prevent this, you should seperate your compostable plastics from your non-compostable ones. Put your compostable plastics in a compost pile or composting facility instead of in the recycling bin.
+			<br>References: <a href="https://www.colorado.edu/ecenter/2022/04/26/debunking-recycling-myths">University of Colorado</a></p>
+			<h2>Myth: Global warming isn't real because it is still cold.</h2>
+			<p>Even though the weather will still be cold at winter, this doesnt mean climate change is real. However, weather such as a cold snap only happens on a small time frame, and it will still occur despite rising temperatures. Climate, on the other hand, happens on a much larger time frame, spanning several years. As a result, it doesn't make sense to define a change in climate over what occurs in a few days. Plus, winter will always be colder than summer, as that is caused by Earth's rotation around the sun instead what goes on in the atmosphere.
+			<br>References: <a href="https://www.wwf.org.uk/updates/here-are-10-myths-about-climate-change">World Wildlife Fund (WWF)</a></p>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

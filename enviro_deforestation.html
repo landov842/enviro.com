@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Deforestation</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(25,150,65,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage_tweaked.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Deforestation</h2>
+				<p>Clearing our forests to mkae way for cities and farms is lowering biodiversity, wrecking haitats, and exacerbating climate change.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<h2>Deforestation</h2>
+			<p>Deforestation is defined as <q>the clearing, destroying, or otherwise removal of trees through deliberate, natural, or accidental means</q> (Pachanama Alliance). In other words, deforestation is the destruction and removal of trees in an area. Deforestation occurs in a variety of places around the globe, including the Amazon rainforest, and it has drastic consequences&mdash;soil erosion, flooding, and and increased greenhouse gas emissions, to name a few. Knowing why it is done and how it affects the environment is pivotal to resolve this glaring issue.</p>
+			<h2>Causes of Deforestation</h2>
+			<h3>Wildfires</h3>
+			<p>One common cause of deforestation is wildfires. Contrary to what you might expect, wildfires are not completely harmful to forests: <q>natural wildfire cycles caused by lightning have played an integral role in maintaining ecosystem health for millenia</q> (NRDC). However, due to warmer and drier conditions created by climate change, wildfires have expanded to unprecendented levels and burning large amounts of trees. Such large fires have gobbled up forests and supercharged deforestation.</p>
+			<h3>Agriculture</h3>
+			<p>Another massive source of deforestation is agriculture. Agriculture requires a lot of land, so new land is often gained by clearing forests. Palm oil is one cause of deforestation: <q>American imports of palm oil ... are responsible for overwhelming rates of deforestation in Indonesia</q> (NRDC). Livestock raising is another offender: <q>since 1970, cattle ranching drove the vast majority of the deforestation in the Amazon</q> (The Humane League). Part of the deforestation comes from making space for growing animal feed crops, such as soy, as well as other food crops, such as rice, cereals, vegetables, and fruits (Sentient Media).</p>
+			<h3>Lumber and Paper Production</h3>
+			<p>The demand for wood products has also encouraged deforestation. Forests are sometimes cleared in demand for wood, which is used for lumber or converted into paper. The wood is also sometimes used as biomass energy, an alternative to fossil fuels. While it does seems somewhat helpful to the environment, it actually is not: scientists have determined that wood power is actually <q>producing more greenhouse gas per unit than coal</q> (NRDC).</p>
+			<h3>Mining</h3>
+			<p>Mining is another cause of deforestation, as trees are removed to make way for mines. Mining-related deforestation has supercharged recently: <q>one third of the mining-related deforestation seen in the last 20 years has occured in just the last five years</q> (NRDC). This includes the additional clearing of trees to make space for supporting infrastructure.</p>
+			<h3>Urbanization</h3>
+			<p>Urbanization is another incentive to climate change. Forests are often cleared to make space for roads, cities, and buildings. When roads are built near forests, it encourages deforestation to make space for development. Not only that, development near forests puts people at risk of wildfire damage.</p>
+			<h2>Effects of Deforestation</h2>
+			<h3>Habitat and Biodiversity Loss</h3>
+			<p>One of the largest consequences of deforestation is habitat loss. The trees in forests offer many benefits to the animals living there, including shelter and temperature regulation (Pachamama Alliance). Without trees, animals lose these benefits, making them more vulnerable and less likely to survive. This, in turn, harms biodiversity, as less species will survive when the trees aiding their survival are removed. It is estimated that <q>70% of land animals and plant species live in forests,</q> so deforestation will likely hit hard on forest biodviersity (Pachamama Alliance).</p>
+			<h3>Increased Greenhouse Gas Emissions</h3>
+			<p>Losing trees in forests also results in increasing greenhouse gas emissions. When trees photosynthesize, they suck in carbon dioxide from the air, taking greenhouse gases out of the atmosphere. Healthy forests actually <q>absorb an estimated 16 billion metric tons of carbon dioxide per year</q> (earth.org). However, when there are less trees, the carbon absorption of forests are lowered, so less greenhouse gases are taken out of atmosphere. To make matters worse, people sometimes clear forests by burning them, resulting in wildfires that not only leave trees unable to absorb carbon dioxide but adds carbon dioxide to the air. As a result, deforestation is the second-largest emitter of greenhouse gases, after fossil fuels (NRDC). This is further intensified by the activities that the land is used for, such as livestock farming and urban development.</p>
+			<h3>Soil Erosion</h3>
+			<p>Deforestation also results in soil erosion. Trees aid land in retaining water and topsoil (the uppermost layer of soil that is rich with nutrients), allowing other types of forest life to live in the forest (Pachamama Alliance). Without trees, the soil erodes away, leaving the land left behind to be more barren and susceptible to flooding (Pachamama Alliance). Since the soil has been depleted of its nutrients, plants and animals can no longer nourish themselves and starve. Furthermore, eroded soil is less effective at retaining water, so flooding is more likely on deforested areas (Sentient Media).</p>
+			<h3>Health Hazards</h3>
+			<p>Deforestation can also result in health hazards for people living in or near forests. When forests are cleared, the animals have lost their habitat, so they migrate in human territory. Such encounters can be dangerous, though, as animals can spread diseases to humans. For example, <q>researchrs found that a 1% loss in forest cover increased the incidence of malaria by 10%</q> (The Humane League). Deforestation can also harm people that use forests as a resources. Indigenous peoples use forests as a source of food and medicine, so when industries cut down forests for land, Indigenous peoples lose their access to food and medicine. This results in food insecurity for these people</p>
+			<h3>What to Do</h3>
+			<p>Deforestation is an extremely harmful act on the environment. However, into to resolve this issue, we have to act on it. To learn how to stop deforestation and protect forests, click <a href="enviro_protecting_forests.html">here</a>. If you want to test your knowledge on deforestation, click <a href="enviro_deforestation_quiz.html">here</a>.</p>
+			<p>References: <a href="https://pachamama.org/effects-of-deforestation">Pachamama Alliance</a>, <a href="https://earth.org/how-does-deforestation-affect-the-environment/">earth.org</a>, <a href="https://www.nrdc.org/stories/deforestation-forest-degradation-causes-effects-solutions">NRDC</a>, <a href="https://thehumaneleague.org/article/effects-of-deforestation">The Humane League</a>, <a href="https://sentientmedia.org/effects-of-deforestation/">Sentient Media</a></p>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Green Infrastructure</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(5,200,65,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_homepage_tweaked.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_environmental_problems.html">Environmental Problems</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste.html">Waste</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation.html">Deforestation</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing.html">Greenwashing</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_protecting_forests.html">Protecting Forests</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure.html">Green Infrastructure</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy.html">Renewable Energy</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution_quiz.html">Pollution Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Green Infrastructure</h2>
+				<p>When it rains, stormwater often picks up chemicals as it flows from cities and suburbs into streams and lakes. Green infrastructure can soak up that stormwater beofre it takes chemicals into rivers.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<h2>Green Infrastructure</h2>
+			<p>Green infrastructure is a system where rainwater is soaked up quickly when it falls instead of traveling and draining into a river or lake (EPA). When rain falls, rainwater often comes into contact with pollutants such as bacteria and heavy metals. As the stormwater travels into a body of water, stormwater takes those pollutants and bring them with it into the body of water. Green infrastructure soaks up the rain so it does not come into contact with pollutants and take them to bodies of water. Green infrastrcture has a lot of benefits, including (information obtained from the EPA):
+				<ul>
+					<li>Environmental<ul>
+						<li>Improves Water Quality. Green infrastructure <q>can be designed to capture and absorb stormwater and filter pollutants</q> (EPA).</li>
+						<li>Reduces Localized Flooding. Green infrastructure can help reduce flooding by <q>capturing water from small, frequently occuring storm events and slowing down and temporarily storing storm water</q> (EPA).</li>
+						<li>Captures Water for Reuse. Some types of green infrastructure, such as rain barrels, store rain water to used later.</li>
+						<li>Reduces Heat Island Effect. Urban areas are covered with materials that absorb and release radiation from the Sun, making temperatures in cities warmer than they would be in a more rural area (EPA). Green infrastrcture often includes vegetation that reduce this effect by producing shade and reflecting radiation from the Sun.</li>
+					</ul></li>
+					<li>Social<ul>
+						<li>Improved Health, Well-Being, and Sense of Community. Green infrastructure helps prevent water pollution, which bossts the safety of the people that use nearby bodies of water for drinking and other purposes. Furthermore, green spaces such as parks <q>promote outdoor physical activity ... enhance the strength of social ties between neighbors, which can lower rates of social disorders, anxiety and depression ... [and] reduce mental fatigue or stress</q> (EPA).</li>
+						<li>Opportunity to Engae with the Public. Green infrastrcture can alow residents to engage in how they can change their community for the better.</li>
+					</ul></li>
+					<li>Economical<ul>
+						<li>Reduce Flood Damage Costs. <q>Green infrastructure can lessen the impacts of flood damage to properties and infrastructure,</q> resulting in less money spent on restoring properties damaged by floods (EPA).</li>
+						<li>Reduce Wastewater Infrastructure Costs. Green infrastructure can save money on treating urban runoff, as <q>reducing runoff volumes with green infrastructure can also reduce the amount and size of piped infrastructure needed to carry stormwater to a wastewater treatment facility</q> (EPA).</li>
+						<li>Green jobs. Designing, installing, and maintaining green infrastructure can also create jobs for people, regardless of education. For instance, <q>52 percent of green infrastructure workers in Pennsylvania earn more than $31,200 annually (i.e., $15 per hour), even without a high school diploma</q> (EPA).</li>
+					</ul></li>
+				</ul></p>
+			<p>There are many different types of green infrastructure out there in the world, such as (EPA, Wikipedia):
+				<ul>
+					<li>Bioretention/Rain Gardens. A rain garden is a sunken area filled with vegetation that collects rainwater from sidewlaks, streets, and the like. They <q>allow water to temporarily pond when it rains and then either soak into the ground or flow through an underdrain</q> (EPA). They lower the heat island effect, increase biodiversity, and improve water quality (Wikipedia).</li>
+					<li>Bioswales. Bioswales are channels that <q>use vegetation or mulch to slow, filter, and treat stormwater as it flows through a shallow channel</q> (EPA).</li>
+					<li>Permeable Pavements. This type of pavement allows water to soak through, causing the water then be stored in the soil beneath.</li>
+					<li>Green roofs. Green roofs are roofs covered with vegetation in order to capture rainwater.</li>
+					<li>Constructed wetlands. These are manmade wetlandshtat are used as a filter for stormwater. They canhelp in removing nitrogen, phosphorous, metal, and pathogen pollution from water (Wikipedia).</li>
+					<li>Rainwater Harvesting. Rainwater harvesting systems such as rain barrels or cisterns collect rainwater and store for later use.</li>
+					<li>Green Parking. This takes green infrastructure and applies it to parking lots. This can include bioswales to circle the parking lot to collect rainwater, or rain gardens to be in the medians (EPA).</li>
+					<li>Living Shorelines. Living shorelines have materials such as plants and stones put on a shoreline to lower erosion and filter runoff (EPA).</li>
+					<li>Urban forests. Wikipedia defines an urban forest as <q>a forest, or collection of trees, that grow within a city, town, or a suburb.</q> Urban forests can reduce air pollution, reduce urban runoff, and even provide habitat for wildlife (Wikipedia).</li>
+				</ul></p>
+			<h2>Examples of Green Infrastructure</h2>
+				<ul>
+					<li>Tijuca Forest and Pedra Branca State Park in Rio de Janeiro, Brazil (Wikipedia)</li>
+					<li>Sanjay Gandhi National Park in Mumbai, India (Wikipedia)</li>
+					<li>Nebraska National Forest in Nebraska (Wikipedia)</li>
+					<li>Healthy Waterways Raingardens Program in Australia has built over 10,000 rain gardens in Melbourne, Australia (Wikipedia)</li>
+					<li>The Wildfowl and Wetlands Trust's London Wetland Centre, a wetland reserve in southwest London, includes a rain garden (Wikipedia)</li>
+					<li>The Day Brook Rain Garden Project has built rain gardens in Sherwood, Nottingham, England (Wikipedia)</li>
+					<li>There is a campaign to build 12,000 rain garden in Puget Sound Basin in Western Washington State (Wikipedia)</li>
+					<li>Dakota County and the city Maplewood in Minnesota have encouraged their residents to install rain gardens and bioswales (Wikipedia)</li>
+					<li>In Seattle, rain gardens were built along a residential street (Wikipedia)</li>
+					<li>Kansas City, Missouri has launched the initiative 10,000 Rain Gardens to encourage property owners to build raingardens, with a goal of having 10,000 (Wikipedia)</li>
+					<li>In Delaware, several rain gardens have been built by a collaboration between the University of Delaware and environmental groups (Wikipedia)</li>
+					<li>Biofiltration added near San Marino Drive, Mapleview Street, and Estrella Country Park in San Diego County, California (San Diego County)</li>
+				</ul>
+			<p>References: <a href="https://www.epa.gov/green-infrastructure/about-green-infrastructure">EPA (About Green Infrastructure)</a>, <a href="https://www.epa.gov/green-infrastructure/environmental-benefits-green-infrastructure">EPA (Environmental Benefits)</a>, <a href="https://www.epa.gov/green-infrastructure/social-benefits-green-infrastructure">EPA (Social Benefits)</a>, <a href="https://www.epa.gov/green-infrastructure/economic-benefits-green-infrastructure">EPA (Economic Benefits)</a>, <a href="https://www.epa.gov/green-infrastructure/types-green-infrastructure">EPA (Types of Green Infrastructure)</a>, <a href="https://en.wikipedia.org/wiki/Green_infrastructure">Wikipedia (Green Infrastructure)</a>, <a href="https://en.wikipedia.org/wiki/Urban_forest">Wikipedia (Urban Forests)</a>, <a href="https://en.wikipedia.org/wiki/Constructed_wetland">Wikipedia (Constructed Wetland)</a>, <a href="https://en.wikipedia.org/wiki/Rain_garden">Wikipedia (Rain Gardens)</a>, <a href="https://www.sandiegocounty.gov/content/sdc/dpw/watersheds/GI-Projects.html">San Diego County</a></p>
+			<h3>Want to test your knowledge? Click <a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure_quiz.html">here</a> to take the quiz.</h3>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_homepage_tweaked.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution.html">Pollution</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste.html">Waste</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation.html">Deforestation</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="file:///Users/lucas/Documents/html_adventureZ/very_firtst_rubbish/senior_seminar_website_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

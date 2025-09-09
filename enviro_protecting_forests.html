@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Protecting Forests</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(25,220,5,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="fenviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Protecting Forests</h2>
+				<p>With deforestation running rampant, the world's forests need to be protected in order to keep the environment healthy.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<h2>Protecting Forests</h2>
+			<p>We are at risk of losing our forests. With the demand of fresh land wanted for agriculture, development, and mining, forests have been disappearing at an alarming rate. Our governments need to protect our forests in order to keep them from disappearing. Click <a href="enviro_deforestation.html">here</a> to learn more about the dangers of deforestation.</p>
+			<h2>Why Should We Protect Forests?</h2>
+			<p>Forests offer many benefits to the environment and to use. Thes include (PEFC):
+				<ul>
+					<li>Mitigating Climate Change. Through photosynthesis and other processes, forests capture carbon dioxide from the atmosphere and store it into their trunks for hundreds of years</li>
+					<li>Protection Against Natural Disasters. Forests also aid in protection against natural disasters. They can <q>[act] as barriers against heavy rains, flooding, and strong winds [and] they help control or reduce the risk of soil erosion, landslides, and avalanches</q> (PEFC)</li>
+					<li>Biodiversity. Forests <q>are home to about 80 percent of the world's land-based animals and plants</q> (PEFC)</li>
+					<li>Water Cycle Participation. Forests absorb water after it rains and re-releases the water afterwards, a key part of the global water cycle that without which would lead to increased drough tand desertification</li>
+					<li>Livelihoods. Forests are a major contributor to the livelihoods of people. In fact, it is estimated that 1.6 billion people's livelihoods are aided by forests, with 600 million of them fully dependent on them</li>
+				</ul></p>
+			<h2>What Should We Do?</h2>
+			<ul>
+				<li>Reduce wildfire risk. Removing wildfire fuel or controlled and prescribed burns can be used to reduce wildfire spread. Also, consider weather conditions that may increase the likelihood of a wildfire. (EPA)</li>
+				<li>Limit the spread of invasive species and pests. Pests and invasive species can damage forests by competing and pushing out native wildlife, so take steps to limit invasive pests' spread. (EPA)</li>
+				<li>Encourage government action. Encourage your local government to institute policy creating parks, conserving forests, dismantling deforestation, and eliminating greenwashing. (TREE Foundation)<br>Examples of national policies that help protect forests are:<ul>
+					<li>Plant Protection Act&mdash;prevents the introduction or spread of forest pests (NASF)</li>
+					<li>Federal Insecticide, Fungicide, and Rodenticide Act (FIRFA)&mdash;regulates chemical use in forests (NASF)</li>
+					<li>Endangered Species Act of 1973&mdash;helps protect and recover endangered species (NASF)</li>
+					<li>Clean Water Act of 1972&mdash;regulatesquality of water and addresses water pollution (NASF)</li>
+					<li>Lacey Act&mdash;addresses illegally obtained plant products (NASF)</li>
+					<li>Clean Air Act of 1973&mdash;requires federal agencies to protecct air quality and address air pollution (NASF)</li>
+					<li>Bankhead-Jones Farm Tenant Act of 1937&mdash;directs the Secretary of Agriculture (head of the U.S. Department of Agriculture) to establish a program that addresses soil erosion, deforestation, and harming wildlife (Forest Service)</li>
+				</ul></li>
+				<li>Plant trees. Rebuilding forests and degrading ecosystem is key to helping the environment. (TREE Foundation)</li>
+				<li>Support forest conservation organizations. Donate to a conservation charity, or volunteer for a forest nonprofit. (TREE Foundation)</li>
+				<li>Learn about forests. The more you know about forests, the more you can help. (TREE Foundation)</li>
+				<li>Inspire others to take action. Multiple people can make a larger impact than just one person. (TREE Foundation)</li>
+				<li>Buy forest-friendly products. Avoid buying beef, soy, or uncertified products. Instead, look for certifications from groups such as the Rainforest Alliance, Forest Stewardship Council, or the Roundtable on Sustainable Palm Oil. (TREE Foundation)</li>
+				<li>Advocate for climate change solutions. Work to reduce your own carbon footprint, and campaign for eco-friendly solutions. (TREE Foundation)</li>
+				<li>Choose a forest-friendly diet. Avoid eating or buying products made with beef, palm oil, or soy, as <q>beef, palm oil, and soy are responsible for 60% of tropical deforestation</q> (Rainforest Foundation).</li>
+				<li>Support Indigenous peoples. Many Indigenous people depend on forests for their survival. Learn about their history and culture, buy Indigenous products, and share their stories on social media to amplify their voices. (Rainforest Foundation)</li>
+				<li>Use social media to spread awareness. (Rainforest Foundation)</li>
+				<li>Help fund for sustainable practices. (WWF)</li>
+			</ul>
+			<p>References: <a href="https://pefc.org/what-we-do/why-forests-are-important/the-benefits-of-forests">PEFC</a>, <a href="https://www.epa.gov/climateimpacts/climate-change-impacts-forests">EPA</a>, <a href="https://treefoundation.org/education/10-things-you-can-do-to-save-forests/">TREE Foundation</a>, <a href="https://rainforestfoundation.org/engage/10-things-you-can-do/">Rainforest Foundation</a>, <a href="https://www.worldwildlife.org/initiatives/forests">World Wildlife fund (WWF)</a>, <a href="https://www.stateforesters.org/timber-assurance/sustainability/federal-laws/">National Association of State Foresters (NASF)</a>, <a href="https://www.fs.usda.gov/about-agency/regulations-policies/laws-regulations">U.S. Forest Service</a></p>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

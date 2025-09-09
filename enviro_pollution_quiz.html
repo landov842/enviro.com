@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Pollution Quiz</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(65,65,65,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="fenviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Pollution Quiz</h2>
+				<p>Test your knowledge on pollution and greenhouse gases!<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<form>
+				<h3>Question #1: What is pollution?</h3>
+				<input type="radio" id="1A" name="Q1">
+				<label for="1A">The removal of trees and forests</label>
+				<br><input type="radio" id="1B" name="Q1">
+				<label for="1B">The release of harmful chemicals into the air or water</label>
+				<br><input type="radio" id="1C" name="Q1">
+				<label for="1C">The amount and diversity of species in an area</label>
+				<br><input type="radio" id="1D" name="Q1">
+				<label for="1D">The tactics used by companies to make their products more eco-friendly than they actually are</label>
+				<h3>Question #2: What is the most common type of greenhouse gas produced by human activities?</h3>
+				<input type="radio" id="2A" name="Q2">
+				<label for="2A">Methane</label>
+				<br><input type="radio" id="2B" name="Q2">
+				<label for="2B">Carbon dioxide</label>
+				<br><input type="radio" id="2C" name="Q2">
+				<label for="2C">Nitrous oxide</label>
+				<br><input type="radio" id="2D" name="Q2">
+				<label for="2D">Fluorinated gases</label>
+				<h3>Question #3: Which type of greenhouse gases are the most potent (having the strongest warming effect)?</h3>
+				<input type="radio" id="3A" name="Q3">
+				<label for="3A">Carbon dioxide</label>
+				<br><input type="radio" id="3B" name="Q3">
+				<label for="3B">Nitrous Oxide</label>
+				<br><input type="radio" id="3C" name="Q3">
+				<label for="3C">Methane</label>
+				<br><input type="radio" id="3D" name="Q3">
+				<label for="3D">Fluorinated Gases</label>
+				<h3>Question #4: What is the biggest producer of CO<sub>2</sub> emissions?</h3>
+				<input type="radio" id="4A" name="Q4">
+				<label for="4A">Transportation</label>
+				<br><input type="radio" id="4B" name="Q4">
+				<label for="4B">Energy Production</label>
+				<br><input type="radio" id="4C" name="Q4">
+				<label for="4C">Industry</label>
+				<br><input type="radio" id="4D" name="Q4">
+				<label for="4D">Plastic Production</label>
+				<h3>Question #5: What is the biggest producer of methane emissions?</h3>
+				<input type="radio" id="5A" name="Q5">
+				<label for="5A">Agriculture</label>
+				<br><input type="radio" id="5B" name="Q5">
+				<label for="5B">Energy Production</label>
+				<br><input type="radio" id="5C" name="Q5">
+				<label for="5C">Industry</label>
+				<br><input type="radio" id="5D" name="Q5">
+				<label for="5D">Landfills</label>
+				<h3>Question #6: Nitrous oxide is most commonly released through ...</h3>
+				<input type="radio" id="6A" name="Q6">
+				<label for="6A">Burning coal</label>
+				<br><input type="radio" id="6B" name="Q6">
+				<label for="6B">Mining</label>
+				<br><input type="radio" id="6C" name="Q6">
+				<label for="6C">Synthetic fertilizers</label>
+				<br><input type="radio" id="6D" name="Q6">
+				<label for="6D">Energy generation</label>
+				<h3>Question #7: Which is not a greenhouse gas?</h3>
+				<input type="radio" id="7A" name="Q7">
+				<label for="7A">Hydrofluorocarbons (HFCs)</label>
+				<br><input type="radio" id="7B" name="Q7">
+				<label for="7B">Methane</label>
+				<br><input type="radio" id="7C" name="Q7">
+				<label for="7C">Sulfur hexafluoride</label>
+				<br><input type="radio" id="7D" name="Q7">
+				<label for="7D">Oxygen gas</label>
+				<h3>Question #8: What is the result of greenhouse gases being added in Earth's atmosphere?</h3>
+				<input type="radio" id="8A" name="Q8">
+				<label for="8A">Faster rotation</label>
+				<br><input type="radio" id="8B" name="Q8">
+				<label for="8B">Climate change and global warming</label>
+				<br><input type="radio" id="8C" name="Q8">
+				<label for="8C">Increased solar flares</label>
+				<br><input type="radio" id="8D" name="Q8">
+				<label for="8D">Retreating oceans and lowering sea levels</label>
+				<h3>Question #9: What is one of the most common source of water pollution?</h3>
+				<input type="radio" id="9A" name="Q9">
+				<label for="9A">Sewage</label>
+				<br><input type="radio" id="9B" name="Q9">
+				<label for="9B">Oil spills</label>
+				<br><input type="radio" id="9C" name="Q9">
+				<label for="9C">Earthquakes</label>
+				<br><input type="radio" id="9D" name="Q9">
+				<label for="9D">Sediment from soil erosion</label>
+				<h3>Question #10: What is eutrophication?</h3>
+				<input type="radio" id="10A" name="Q10">
+				<label for="10A">Acid rain</label>
+				<br><input type="radio" id="10B" name="Q10">
+				<label for="10B">Death of fish due to oil spills</label>
+				<br><input type="radio" id="10C" name="Q10">
+				<label for="10C">Overgrowth of algae due to excessive nutrients</label>
+				<br><input type="radio" id="10D" name="Q10">
+				<label for="10D">Toxins being released into the atmosphere</label>
+				<h3>Question #11: What is a major cause of thermal water pollution?</h3>
+				<input type="radio" id="11A" name="Q11">
+				<label for="11A">Tourism</label>
+				<br><input type="radio" id="11B" name="Q11">
+				<label for="11B">Agriculture</label>
+				<br><input type="radio" id="11C" name="Q11">
+				<label for="11C">Industry and manufacturing</label>
+				<br><input type="radio" id="11D" name="Q11">
+				<label for="11D">Energy production</label>
+				<h3>Question #12: What are microplastics?</h3>
+				<input type="radio" id="12A" name="Q12">
+				<label for="12A">Rubber particles from tires</label>
+				<br><input type="radio" id="12B" name="Q12">
+				<label for="12B">Small plastic fragments</label>
+				<br><input type="radio" id="12C" name="Q12">
+				<label for="12C">Insects that feed on polluted water</label>
+				<br><input type="radio" id="12D" name="Q12">
+				<label for="12D">Microscopic algae</label>
+				<h3>Question #13: What is the most common use of fluorinated gases?</h3>
+				<input type="radio" id="13A" name="Q13">
+				<label for="13A">To act as a replacement for ozone-depleting substances</label>
+				<br><input type="radio" id="13B" name="Q13">
+				<label for="13B">Electricity Production</label>
+				<br><input type="radio" id="13C" name="Q13">
+				<label for="13C">Improper disposal of chemicals</label>
+				<br><input type="radio" id="13D" name="Q13">
+				<label for="13D">Landfills</label>
+				<h3>Question #14: What are PFAs?</h3>
+				<input type="radio" id="14A" name="Q14">
+				<label for="14A">A collection of species of bacteria</label>
+				<br><input type="radio" id="14B" name="Q14">
+				<label for="14B">A series of laws that were created to address environmental issues</label>
+				<br><input type="radio" id="14C" name="Q14">
+				<label for="14C">Synthetic chemicals that resist water and grease</label>
+				<br><input type="radio" id="14D" name="Q14">
+				<label for="14D">Organizations that advocate for sustainability</label>
+				<h3>Question #15: Why have PFAs come under scrutiny?</h3>
+				<input type="radio" id="15A" name="Q15">
+				<label for="15A">They are extremely expensive to make, as they require rare ingredients</label>
+				<br><input type="radio" id="15B" name="Q15">
+				<label for="15B">They are dangerous to people, as they can cause cancers and other severe health problems when ingested</label>
+				<br><input type="radio" id="15C" name="Q15">
+				<label for="15C">They are notorious greenhouse gases</label>
+				<br><input type="radio" id="15D" name="Q15">
+				<label for="15D">They are produced by bacteria found in sewage</label>
+				<h3>Question #16: Which everyday activity can contribute to water pollution if done improperly?</h3>
+				<input type="radio" id="16A" name="Q16">
+				<label for="16A">Recycling plastics</label>
+				<br><input type="radio" id="16B" name="Q16">
+				<label for="16B">Washing cars on the street</label>
+				<br><input type="radio" id="16C" name="Q16">
+				<label for="16C">Buying eco-friendly products</label>
+				<br><input type="radio" id="16D" name="Q16">
+				<label for="16D">Composting food waste</label>
+				<h3>Question #17: What is a common source of indoor air pollution?</h3>
+				<input type="radio" id="17A" name="Q17">
+				<label for="17A">Television screens</label>
+				<br><input type="radio" id="17B" name="Q17">
+				<label for="17B">Houseplants</label>
+				<br><input type="radio" id="17C" name="Q17">
+				<label for="17C">Using the stove</label>
+				<br><input type="radio" id="17D" name="Q17">
+				<label for="17D">Wi-Fi signals</label>
+				<h3>Question #18: What is the main environmental threat from microbeads found in cosmetic products?</h3>
+				<input type="radio" id="18A" name="Q18">
+				<label for="18A">They evaporate into the atmosphere, acting as a greenhouse gas</label>
+				<br><input type="radio" id="18B" name="Q18">
+				<label for="18B">They clog sewer pipes, resulting in endangerments to public health</label>
+				<br><input type="radio" id="18C" name="Q18">
+				<label for="18C">They contain nitrogen and phosphorous, resulting in algae blooms</label>
+				<br><input type="radio" id="18D" name="Q18">
+				<label for="18D">They pollute waterways and harm marine life</label>
+				<h3>Question #19: What environmental effect is caused by excess nitrogen runoff?</h3>
+				<input type="radio" id="19A" name="Q19">
+				<label for="19A">Algae blooms</label>
+				<br><input type="radio" id="19B" name="Q19">
+				<label for="19B">Increased salinity</label>
+				<br><input type="radio" id="19C" name="Q19">
+				<label for="19C">Coral bleaching</label>
+				<br><input type="radio" id="19D" name="Q19">
+				<label for="19D">Formation of glaciers</label>
+				<h3>Question #20: Which synthetic gas has an extremely high global warming effect but is used in refrigerators?</h3>
+				<input type="radio" id="20A" name="Q20">
+				<label for="20A">Carbon dioxide</label>
+				<br><input type="radio" id="20B" name="Q20">
+				<label for="20B">Methane</label>
+				<br><input type="radio" id="20C" name="Q20">
+				<label for="20C">Nitrous oxide</label>
+				<br><input type="radio" id="20D" name="Q20">
+				<label for="20D">Chlorofluorocarbons (CFCs)</label>
+				<h3>Question #21: Which of the following is considered a major type of pollution?</h3>
+				<input type="radio" id="21A" name="Q21">
+				<label for="21A">Soil, air, and water</label>
+				<br><input type="radio" id="21B" name="Q21">
+				<label for="21B">Sunlight and wind</label>
+				<br><input type="radio" id="21C" name="Q21">
+				<label for="21C">Vitamin deficiency</label>
+				<br><input type="radio" id="21D" name="Q21">
+				<label for="21D">Earthquakes and storms</label>
+				<h3>Question #22: Which sector contributes the most to water pollution?</h3>
+				<input type="radio" id="22A" name="Q22">
+				<label for="22A">Fashion</label>
+				<br><input type="radio" id="22B" name="Q22">
+				<label for="22B">Aviation</label>
+				<br><input type="radio" id="22C" name="Q22">
+				<label for="22C">Agriculture</label>
+				<br><input type="radio" id="22D" name="Q22">
+				<label for="22D">Space Exploration</label>
+				<h3>Question #23: Which of these is an example of plastic pollution?</h3>
+				<input type="radio" id="23A" name="Q23">
+				<label for="23A">Recycled glass bottles</label>
+				<br><input type="radio" id="23B" name="Q23">
+				<label for="23B">Microplastics in oceans</label>
+				<br><input type="radio" id="23C" name="Q23">
+				<label for="23C">Organic compost</label>
+				<br><input type="radio" id="23D" name="Q23">
+				<label for="23D">Metal cans</label>
+				<h3>Question #24: Which human activity contributes the most to greenhouse gas pollution?</h3>
+				<input type="radio" id="24A" name="Q24">
+				<label for="24A">Wind energy generation</label>
+				<br><input type="radio" id="24B" name="Q24">
+				<label for="24B">Burning fossil fuels</label>
+				<br><input type="radio" id="24C" name="Q24">
+				<label for="24C">Eating organic food</label>
+				<br><input type="radio" id="24D" name="Q24">
+				<label for="24D">Planting trees</label>
+				<h3>Question #25: Which is the biggest source of nitrous oxide emissions?</h3>
+				<input type="radio" id="25A" name="Q25">
+				<label for="25A">Aerosol cans</label>
+				<br><input type="radio" id="25B" name="Q25">
+				<label for="25B">Industry</label>
+				<br><input type="radio" id="25C" name="Q25">
+				<label for="25C">Burning fuel</label>
+				<br><input type="radio" id="25D" name="Q25">
+				<label for="25D">Agriculture</label>
+			</form>
+			<button onclick='checkAnswer("output");'>Check My Answers</button>
+			<h3 id="output">Your results will display here.</h3>
+			<h3>Need some help? Click <a href="enviro_pollution.html">here</a> to go back to the Pollution article.</h3>
+			<script>
+				function checkAnswer (output_location = "") {
+					const answer_key = [
+						"1B",
+						"2B",
+						"3D",
+						"4A",
+						"5A",
+						"6C",
+						"7D",
+						"8B",
+						"9A",
+						"10C",
+						"11D",
+						"12B",
+						"13A",
+						"14C",
+						"15B",
+						"16B",
+						"17C",
+						"18D",
+						"19A",
+						"20D",
+						"21A",
+						"22C",
+						"23B",
+						"24B",
+						"25D"
+					]; //answer_key holds the IDs of the buttons with the correct answers.
+					const answer_rationale = [
+						"Pollution is defined as the release of harmful substances into the environment, as said in Option B. On the other hand, Option A is the definition of deforestation, Option C is the definition of biodiversity, and Option D is the definition of greenwashing.",
+						"Carbon dioxide is the most common greenhouse gas being produced by human activities: for example, the EPA estimated that 80% of all greenhouse gas emissions emitted by human activities in 2022 was carbon dioxide.",
+						"Fluorinated gases have the highest warming effect: specifically, the global warming potential of fluorinated gases is several THOUSANDS higher than carbon dioxide, methane, and nitrous oxide.",
+						"Transportation is the biggest source of cabron emissions. In 2022, the EPA estimated that transportation accounted for 35% of national carbon dioxide emissions, with energy production and industry only producing 30% and 16%, respectively.",
+						"Agriculture produces almost half of our national methane emissions, while energy production only produces about a quarter.",
+						"Nitrous oxide is commonly produced during the production and use of synthetic fertilizers. For instance, ammonium nitrate (chemical formula NH<sub>4</sub>NO<sub>3</sub>), a substance commonly used in agriculture as a fertilizer, often breaks down into nitrous oxide<sup>[<a href='https://en.wikipedia.org/wiki/Ammonium_nitrate'>1</a>]</sup>.",
+						"Oxygen gas is not a greenhouse gas, but methane and fluorinated gases such as HFCs and sulfur hexachloride are.",
+						"Greenhouse gases trap heat in the atmosphere, causing climate change.",
+						"Sewage is the most common cause of water pollution. While oil spills poison large amounts of water, they are not very common. Sediment from soil erosion or earthquake do not contaminate much water, either.",
+						"Eutrophication is when a body of water <q>changes from a clean, clear condition, with a relatively low concentration of dissolved nutrients and a balanced aquatic community, to a nutrient-rich, algae-filled state and thence to an oxygen-deficient, waste-filled condition</q> <sup>[<a href='https://www.britannica.com/science/water-pollution'>2</a>]</sup>.",
+						"Thermal water pollution is often caused by power plants releasing hot water into cooler ponds, lakes, or rivers.",
+						"Microplastics are tiny pieces of plastics&mdash;hence the name.",
+						"The vast majority of the use of fluorinated gases is to replace ozone-depleting substances <sup>[<a href='https://www.epa.gov/ghgemissions/fluorinated-gas-emissions'>3</a>]</sup>",
+						"PFAs are chemicals that resist water, heat, grease, etc. One of the first PFAs invented was Teflon, which made pans non-stick.",
+						"PFAs have been shown to cause cancers, liver issues, developmental issues, hypercholesterolemia (high cholesterol), ulcerative colitis (inflammation in the digestive tract), and more<sup>[<a href='https://en.wikipedia.org/wiki/PFAS'>4</a>]</sup>.",
+						"If not collected or soaked up, the water used to clean the car can pick up chemicals and other pollutants and carry them to bodies of water, resulting in water pollution.",
+						"Using the stove burns natural gas, which produces CO<sub>2</sub>.",
+						"Marine life eat microbeads and microplastics by accident, causing them to get poisoned and potentially die.",
+						"Too much nitrogen in water acts as a fertilizer for algae, triggering a massive algal bloom.",
+						"Chloroflurocarbons, or CFCs, are a type of fluorinated gas used as a refrigerant and have massive global warming potentials.",
+						"Soil, air, and water are the three big types of pollution.",
+						"Agriculture is the biggest contributor to water pollution becuase when it rains, fertilizers, pesticides, and other chemicals are taken by stormwater into bodies of water, contaminating them.",
+						"Out of the four options, only microplastics come form plastic.",
+						"Fossil fuel burning is by far the largest producer of greenhouse gas and air pollution.",
+						"Nitrous oxide is often produced by the fertilizers used on farms."
+					];
+					var score = 0; //score holds the amount of correct answers.
+					var result = "Questions you got wrong: <ul>";
+
+					for (var i = 0; i < answer_key.length; i++) {
+						if (document.getElementById(answer_key[i]).checked) {
+							score++;
+						} else {
+							result = result + "<li>" + (i + 1) + ". The correct answer is " + answer_key[i].substring(answer_key[i].length - 1) + ". " + answer_rationale[i] + "</li>";
+						}
+					}
+
+					result = "You scored a " + score + " out of " + answer_key.length + ". " + result + "</ul>";
+					document.getElementById(output_location).innerHTML = result;
+				}
+			</script>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

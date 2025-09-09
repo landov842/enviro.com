@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Waste Quiz</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(65,65,65,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="fenviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Waste Quiz</h2>
+				<p>Test your knowledge on waste!<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<form>
+				<h3>Question #1: What is municipal solid waste?</h3>
+				<input type="radio" id="1A" name="Q1">
+				<label for="1A">Waste from manufacturing plants</label>
+				<br><input type="radio" id="1B" name="Q1">
+				<label for="1B">Everyday garbage from homes and businesses</label>
+				<br><input type="radio" id="1C" name="Q1">
+				<label for="1C">Nuclear waste from power plants</label>
+				<br><input type="radio" id="1D" name="Q1">
+				<label for="1D">Agricultural waste</label>
+				<h3>Question #2: Which of the following is hazardous waste?</h3>
+				<input type="radio" id="2A" name="Q2">
+				<label for="2A">Paper scraps</label>
+				<br><input type="radio" id="2B" name="Q2">
+				<label for="2B">Banana peels</label>
+				<br><input type="radio" id="2C" name="Q2">
+				<label for="2C">Batteries</label>
+				<br><input type="radio" id="2D" name="Q2">
+				<label for="2D">Glass bottles</label>
+				<h3>Question #3: E-waste refers to ...</h3>
+				<input type="radio" id="3A" name="Q3">
+				<label for="3A">Food scraps</label>
+				<br><input type="radio" id="3B" name="Q3">
+				<label for="3B">Excess electricity</label>
+				<br><input type="radio" id="3C" name="Q3">
+				<label for="3C">Waste from electronics</label>
+				<br><input type="radio" id="3D" name="Q3">
+				<label for="3D">Environmental waste from forests</label>
+				<h3>Question #4: Organic waste includes ...</h3>
+				<input type="radio" id="4A" name="Q4">
+				<label for="4A">Batteries and wires</label>
+				<br><input type="radio" id="4B" name="Q4">
+				<label for="4B">Tin cans</label>
+				<br><input type="radio" id="4C" name="Q4">
+				<label for="4C">Ceramic tiles</label>
+				<br><input type="radio" id="4D" name="Q4">
+				<label for="4D">Food scraps</label>
+				<h3>Question #5: Medical waste is generated by ...</h3>
+				<input type="radio" id="5A" name="Q5">
+				<label for="5A">Hospitals</label>
+				<br><input type="radio" id="5B" name="Q5">
+				<label for="5B">Construction</label>
+				<br><input type="radio" id="5C" name="Q5">
+				<label for="5C">Farms</label>
+				<br><input type="radio" id="5D" name="Q5">
+				<label for="5D">Fashion industries</label>
+				<h3>Question #6: Which item is considered recyclable?</h3>
+				<input type="radio" id="6A" name="Q6">
+				<label for="6A">Styrofoam</label>
+				<br><input type="radio" id="6B" name="Q6">
+				<label for="6B">Contaminated tissue paper</label>
+				<br><input type="radio" id="6C" name="Q6">
+				<label for="6C">Broken glass</label>
+				<br><input type="radio" id="6D" name="Q6">
+				<label for="6D">Aluminum cans</label>
+				<h3>Question #7: Improper waste disposal can lead to ...</h3>
+				<input type="radio" id="7A" name="Q7">
+				<label for="7A">Improved soil health</label>
+				<br><input type="radio" id="7B" name="Q7">
+				<label for="7B">Air and water pollution</label>
+				<br><input type="radio" id="7C" name="Q7">
+				<label for="7C">More wildlife sightings</label>
+				<br><input type="radio" id="7D" name="Q7">
+				<label for="7D">Increased soil erosion</label>
+				<h3>Question #8: Burning plastic releases ...</h3>
+				<input type="radio" id="8A" name="Q8">
+				<label for="8A">Vitamins</label>
+				<br><input type="radio" id="8B" name="Q8">
+				<label for="8B">Carbon dioxide</label>
+				<br><input type="radio" id="8C" name="Q8">
+				<label for="8C">Toxic fumes</label>
+				<br><input type="radio" id="8D" name="Q8">
+				<label for="8D">Water vapor</label>
+				<h3>Question #9: Which waste releases microplastics?</h3>
+				<input type="radio" id="9A" name="Q9">
+				<label for="9A">Banana peels</label>
+				<br><input type="radio" id="9B" name="Q9">
+				<label for="9B">Paper clips</label>
+				<br><input type="radio" id="9C" name="Q9">
+				<label for="9C">Low-quality shirts</label>
+				<br><input type="radio" id="9D" name="Q9">
+				<label for="9D">Leather shoes</label>
+				<h3>Question #10: Food waste contributes to ...</h3>
+				<input type="radio" id="10A" name="Q10">
+				<label for="10A">Greenhouse gases via decomposition</label>
+				<br><input type="radio" id="10B" name="Q10">
+				<label for="10B">Cheaper food prices</label>
+				<br><input type="radio" id="10C" name="Q10">
+				<label for="10C">Higher energy bills</label>
+				<br><input type="radio" id="10D" name="Q10">
+				<label for="10D">Healthier diets</label>
+				<h3>Question #11: How does e-waste threaten our health?</h3>
+				<input type="radio" id="11A" name="Q11">
+				<label for="11A">By releasing toxic materials</label>
+				<br><input type="radio" id="11B" name="Q11">
+				<label for="11B">By releasing our data</label>
+				<br><input type="radio" id="11C" name="Q11">
+				<label for="11C">By destroying essential vitamins</label>
+				<br><input type="radio" id="11D" name="Q11">
+				<label for="11D">By attracting insects</label>
+				<h3>Question #12: Which everyday activity supports waste reduction?</h3>
+				<input type="radio" id="12A" name="Q12">
+				<label for="12A">Buying bottled water</label>
+				<br><input type="radio" id="12B" name="Q12">
+				<label for="12B">Reusable containers</label>
+				<br><input type="radio" id="12C" name="Q12">
+				<label for="12C">Overpackaging gifts</label>
+				<br><input type="radio" id="12D" name="Q12">
+				<label for="12D">Throwing away leftovers</label>
+				<h3>Question #13: Composting reduces ...</h3>
+				<input type="radio" id="13A" name="Q13">
+				<label for="13A">Textile waste</label>
+				<br><input type="radio" id="13B" name="Q13">
+				<label for="13B">Organic waste</label>
+				<br><input type="radio" id="13C" name="Q13">
+				<label for="13C">Chemical waste</label>
+				<br><input type="radio" id="13D" name="Q13">
+				<label for="13D">Plastic waste</label>
+				<h3>Question #14: How does recycling help the environment?</h3>
+				<input type="radio" id="14A" name="Q14">
+				<label for="14A">Increase greenhouse gas emissions</label>
+				<br><input type="radio" id="14B" name="Q14">
+				<label for="14B">Promotes deforestation</label>
+				<br><input type="radio" id="14C" name="Q14">
+				<label for="14C">Improves concrete production</label>
+				<br><input type="radio" id="14D" name="Q14">
+				<label for="14D">Conserves resources</label>
+				<h3>Question #15: Which method of waste management are not sustainable?</h3>
+				<input type="radio" id="15A" name="Q15">
+				<label for="15A">Composting</label>
+				<br><input type="radio" id="15B" name="Q15">
+				<label for="15B">Recycling</label>
+				<br><input type="radio" id="15C" name="Q15">
+				<label for="15C">Incineration</label>
+				<br><input type="radio" id="15D" name="Q15">
+				<label for="15D">Reusing</label>
+				<h3>Question #16: Which sector is responsible for the majority of food waste?</h3>
+				<input type="radio" id="16A" name="Q16">
+				<label for="16A">Farming</label>
+				<br><input type="radio" id="16B" name="Q16">
+				<label for="16B">Retail stores</label>
+				<br><input type="radio" id="16C" name="Q16">
+				<label for="16C">Households</label>
+				<br><input type="radio" id="16D" name="Q16">
+				<label for="16D">Transportation</label>
+				<h3>Question #17: What can help reduce food waste?</h3>
+				<input type="radio" id="17A" name="Q17">
+				<label for="17A">Composting and meal planning</label>
+				<br><input type="radio" id="17B" name="Q17">
+				<label for="17B">Disposing of leftovers immmediately</label>
+				<br><input type="radio" id="17C" name="Q17">
+				<label for="17C">Ignoring expiration dates</label>
+				<br><input type="radio" id="17D" name="Q17">
+				<label for="17D">Buying in bulk</label>
+				<h3>Question #18: Synthetic textiles produce which pollutants during decomposition?</h3>
+				<input type="radio" id="18A" name="Q18">
+				<label for="18A">Oxygen</label>
+				<br><input type="radio" id="18B" name="Q18">
+				<label for="18B">Microplastics</label>
+				<br><input type="radio" id="18C" name="Q18">
+				<label for="18C">Natural minerals</label>
+				<br><input type="radio" id="18D" name="Q18">
+				<label for="18D">Water vapor</label>
+				<h3>Question #19: Which of the following helps manage textile waste responsibly?</h3>
+				<input type="radio" id="19A" name="Q19">
+				<label for="19A">Throwing clothes in the trash</label>
+				<br><input type="radio" id="19B" name="Q19">
+				<label for="19B">Purchasing secondhand</label>
+				<br><input type="radio" id="19C" name="Q19">
+				<label for="19C">Washing with strong chemicals</label>
+				<br><input type="radio" id="19D" name="Q19">
+				<label for="19D">Avoiding repairs</label>
+				<h3>Question #20: What is one major challenge with e-waste recycling?</h3>
+				<input type="radio" id="20A" name="Q20">
+				<label for="20A">Excess composting</label>
+				<br><input type="radio" id="20B" name="Q20">
+				<label for="20B">Overgrown forests</label>
+				<br><input type="radio" id="20C" name="Q20">
+				<label for="20C">Internet speed</label>
+				<br><input type="radio" id="20D" name="Q20">
+				<label for="20D">Lack of regulation and infrastructure</label>
+				<h3>Question #21: What is medical waste?</h3>
+				<input type="radio" id="21A" name="Q21">
+				<label for="21A">Leftover cleaning supplies</label>
+				<br><input type="radio" id="21B" name="Q21">
+				<label for="21B">Used textbooks</label>
+				<br><input type="radio" id="21C" name="Q21">
+				<label for="21C">Waste generated from medical diagnosis, treatment, or immunization</label>
+				<br><input type="radio" id="21D" name="Q21">
+				<label for="21D">Contaminated furinture from hospitals</label>
+				<h3>Question #22: What is cytotoxic waste?</h3>
+				<input type="radio" id="22A" name="Q22">
+				<label for="22A">Sharp objects such as needles or scalpels</label>
+				<br><input type="radio" id="22B" name="Q22">
+				<label for="22B">Chemicals that cause mutations or cancer</label>
+				<br><input type="radio" id="22C" name="Q22">
+				<label for="22C">Objects contaminated with pathogens</label>
+				<br><input type="radio" id="22D" name="Q22">
+				<label for="22D">Toxins such as lead or arsenic</label>
+				<h3>Question #23: What is sharps waste?</h3>
+				<input type="radio" id="23A" name="Q23">
+				<label for="23A">Radioactive agents</label>
+				<br><input type="radio" id="23B" name="Q23">
+				<label for="23B">Chemicals that are teratogenic (cause birth defects)</label>
+				<br><input type="radio" id="23C" name="Q23">
+				<label for="23C">Used markers</label>
+				<br><input type="radio" id="23D" name="Q23">
+				<label for="23D">Sharp objects</label>
+				<h3>Question #24: What makes sharps waste dangerous?</h3>
+				<input type="radio" id="24A" name="Q24">
+				<label for="24A">They are difficult to recycle</label>
+				<br><input type="radio" id="24B" name="Q24">
+				<label for="24B">They are flammable</label>
+				<br><input type="radio" id="24C" name="Q24">
+				<label for="24C">They contain mercury</label>
+				<br><input type="radio" id="24D" name="Q24">
+				<label for="24D">They can cause physical injury and spread infections</label>
+				<h3>Question #25: What is recycling?</h3>
+				<input type="radio" id="25A" name="Q25">
+				<label for="25A">Burning waste for fuel</label>
+				<br><input type="radio" id="25B" name="Q25">
+				<label for="25B">Reusing materials to make new products</label>
+				<br><input type="radio" id="25C" name="Q25">
+				<label for="25C">Sending trash to landfills</label>
+				<br><input type="radio" id="25D" name="Q25">
+				<label for="25D">Composting food waste</label>
+				<h3>Question #26: What is "contamination" in recycling?</h3>
+				<input type="radio" id="26A" name="Q26">
+				<label for="26A">Mixing different types of metal together</label>
+				<br><input type="radio" id="26B" name="Q26">
+				<label for="26B">Cleaning bins with bleach</label>
+				<br><input type="radio" id="26C" name="Q26">
+				<label for="26C">Adding non-recyclable items to the recycling bin</label>
+				<br><input type="radio" id="26D" name="Q26">
+				<label for="26D">Shredding cardboard</label>
+				<h3>Question #27: Why is recycling paper important?</h3>
+				<input type="radio" id="27A" name="Q27">
+				<label for="27A">Saves water and energy used in production</label>
+				<br><input type="radio" id="27B" name="Q27">
+				<label for="27B">Prevents trees from decomposing</label>
+				<br><input type="radio" id="27C" name="Q27">
+				<label for="27C">Promotes concrete production</label>
+				<br><input type="radio" id="27D" name="Q27">
+				<label for="27D">Increases air pollution</label>
+				<h3>Question #28; Which of the following is not recyclable in most circumstances?</h3>
+				<input type="radio" id="28A" name="Q28">
+				<label for="28A">Tin Cans</label>
+				<br><input type="radio" id="28B" name="Q28">
+				<label for="28B">Cardboard</label>
+				<br><input type="radio" id="28C" name="Q28">
+				<label for="28C">Wrapping paper with glitter or gloss</label>
+				<br><input type="radio" id="28D" name="Q28">
+				<label for="28D">Pizza boxes</label>
+				<h3>Question #29: How does recycling reduce greenhouse gas emissions?</h3>
+				<input type="radio" id="29A" name="Q29">
+				<label for="29A">By requiring more energy</label>
+				<br><input type="radio" id="29B" name="Q29">
+				<label for="29B">By burning recyclables</label>
+				<br><input type="radio" id="29C" name="Q29">
+				<label for="29C">Through reduced raw material extraction and energy use</label>
+				<br><input type="radio" id="29D" name="Q29">
+				<label for="29D">By burning recyclables</label>
+				<h3>Question #30: What can people do to improve recycling rates?</h3>
+				<input type="radio" id="30A" name="Q30">
+				<label for="30A">Mix garbage with recyclables</label>
+				<br><input type="radio" id="30B" name="Q30">
+				<label for="30B">Sort items correctly</label>
+				<br><input type="radio" id="30C" name="Q30">
+				<label for="30C">Ignore symbols on packaging</label>
+				<br><input type="radio" id="30D" name="Q30">
+				<label for="30D">Burn trash</label>
+				<h3>Question #31: What is composting?</h3>
+				<input type="radio" id="31A" name="Q31">
+				<label for="31A">Natural decomposition of organic waste</label>
+				<br><input type="radio" id="31B" name="Q31">
+				<label for="31B">Wood burning</label>
+				<br><input type="radio" id="31C" name="Q31">
+				<label for="31C">Filtering of air</label>
+				<br><input type="radio" id="31D" name="Q31">
+				<label for="31D">Freezing food scraps</label>
+				<h3>Question #32: Which of these items are compostable?</h3>
+				<input type="radio" id="32A" name="Q32">
+				<label for="32A">Aluminum foil</label>
+				<br><input type="radio" id="32B" name="Q32">
+				<label for="32B">Meat grease</label>
+				<br><input type="radio" id="32C" name="Q32">
+				<label for="32C">Citrus peels</label>
+				<br><input type="radio" id="32D" name="Q32">
+				<label for="32D">Plastic forks</label>
+				<h3>Question #33: What does composting reduce?</h3>
+				<input type="radio" id="33A" name="Q33">
+				<label for="33A">Soil nutrients</label>
+				<br><input type="radio" id="33B" name="Q33">
+				<label for="33B">Food waste</label>
+				<br><input type="radio" id="33C" name="Q33">
+				<label for="33C">Water availability</label>
+				<br><input type="radio" id="33D" name="Q33">
+				<label for="33D">Biodiversity</label>
+				<h3>Question #34: When composting, avoid adding ...</h3>
+				<input type="radio" id="34A" name="Q34">
+				<label for="34A">Banana peels</label>
+				<br><input type="radio" id="34B" name="Q34">
+				<label for="34B">Eggshells</label>
+				<br><input type="radio" id="34C" name="Q34">
+				<label for="34C">Coffee grounds</label>
+				<br><input type="radio" id="34D" name="Q34">
+				<label for="34D">Meat or dairy</label>
+				<h3>Question #35: Which of these is an example of reusing trash?</h3>
+				<input type="radio" id="35A" name="Q35">
+				<label for="35A">Refilling glass jars</label>
+				<br><input type="radio" id="35B" name="Q35">
+				<label for="35B">Composting leaves</label>
+				<br><input type="radio" id="35C" name="Q35">
+				<label for="35C">Incinerating wrappers</label>
+				<br><input type="radio" id="35D" name="Q35">
+				<label for="35D">Melting plastic</label>
+				<h3>Question #36: Which type of plastic is not recyclable?</h3>
+				<input type="radio" id="36A" name="Q36">
+				<label for="36A">Resin Type #1 (also called polyethylene terephthalate, PET, or PETE)</label>
+				<br><input type="radio" id="36B" name="Q36">
+				<label for="36B">Resin Type #2 (also called high-density polyethylene or HDPE)</label>
+				<br><input type="radio" id="36C" name="Q36">
+				<label for="36C">Resin Type #5 (also called polypropylene or PP)</label>
+				<br><input type="radio" id="36D" name="Q36">
+				<label for="36D">Resin Type #6 (also called polystyrene, Styrofoam, or PS)</label>
+				<h3>Question #37: Which item is considered non-recyclable due to food contamination?</h3>
+				<input type="radio" id="37A" name="Q37">
+				<label for="37A">Clean aluminum foil</label>
+				<br><input type="radio" id="37B" name="Q37">
+				<label for="37B">Glass jar</label>
+				<br><input type="radio" id="37C" name="Q37">
+				<label for="37C">Napkins</label>
+				<br><input type="radio" id="37D" name="Q37">
+				<label for="37D">Rinsed plastic bottle</label>
+				<h3>Question #38: What does the recycling triangle with a number inside mean?</h3>
+				<input type="radio" id="38A" name="Q38">
+				<label for="38A">Biodegradability rating</label>
+				<br><input type="radio" id="38B" name="Q38">
+				<label for="38B">Plastic resin type</label>
+				<br><input type="radio" id="38C" name="Q38">
+				<label for="38C">Product expiration date</label>
+				<br><input type="radio" id="38D" name="Q38">
+				<label for="38D">Recycling value</label>
+				<h3>Question #39: Why must recyclables be clean and dry before collection?</h3>
+				<input type="radio" id="39A" name="Q39">
+				<label for="39A">They burn better</label>
+				<br><input type="radio" id="39B" name="Q39">
+				<label for="39B">They reflect light</label>
+				<br><input type="radio" id="39C" name="Q39">
+				<label for="39C">Contaminants can prevents entire batches from being recycled</label>
+				<br><input type="radio" id="39D" name="Q39">
+				<label for="39D">To prevent fire risk</label>
+				<h3>Question #40: Which of the following is recyclable in most places?</h3>
+				<input type="radio" id="40A" name="Q40">
+				<label for="40A">Broken mirror</label>
+				<br><input type="radio" id="40B" name="Q40">
+				<label for="40B">Empty glass bottle</label>
+				<br><input type="radio" id="40C" name="Q40">
+				<label for="40C">Styrofoam cup</label>
+				<br><input type="radio" id="40D" name="Q40">
+				<label for="40D">Ceramic plate</label>
+				<h3>Question #41: Garden hoses are recyclable.</h3>
+				<input type="radio" id="41A" name="Q41">
+				<label for="41A">Yes</label>
+				<br><input type="radio" id="41B" name="Q41">
+				<label for="41B">No</label>
+				<h3>Question #42: Unbroken glass bottles are recyclable.</h3>
+				<input type="radio" id="42A" name="Q42">
+				<label for="42A">Yes</label>
+				<br><input type="radio" id="42B" name="Q42">
+				<label for="42B">No</label>
+				<h3>Question #43: Cardboard boxes are recyclable.</h3>
+				<input type="radio" id="43A" name="Q43">
+				<label for="43A">Yes</label>
+				<br><input type="radio" id="43B" name="Q43">
+				<label for="43B">No</label>
+				<h3>Question #44: Plastic toys are recyclable.</h3>
+				<input type="radio" id="44A" name="Q44">
+				<label for="44A">Yes</label>
+				<br><input type="radio" id="44B" name="Q44">
+				<label for="44B">No</label>
+				<h3>Question #45: Metal cans are recyclable.</h3>
+				<input type="radio" id="45A" name="Q45">
+				<label for="45A">Yes</label>
+				<br><input type="radio" id="45B" name="Q45">
+				<label for="45B">No</label>
+				<h3>Question #46: Wood and grass are recyclable.</h3>
+				<input type="radio" id="46A" name="Q46">
+				<label for="46A">Yes</label>
+				<br><input type="radio" id="46B" name="Q46">
+				<label for="46B">No</label>
+				<h3>Question #47: Paint cans are recyclable.</h3>
+				<input type="radio" id="47A" name="Q47">
+				<label for="47A">Yes</label>
+				<br><input type="radio" id="47B" name="Q47">
+				<label for="47B">No</label>
+				<h3>Question #48: Plastic bags are recyclable.</h3>
+				<input type="radio" id="48A" name="Q48">
+				<label for="48A">Yes</label>
+				<br><input type="radio" id="48B" name="Q48">
+				<label for="48B">No</label>
+				<h3>Question #49: Paperback books are recyclable.</h3>
+				<input type="radio" id="49A" name="Q49">
+				<label for="49A">Yes</label>
+				<br><input type="radio" id="49B" name="Q49">
+				<label for="49B">No</label>
+				<h3>Question #50: Windows and mirrors are recyclable.</h3>
+				<input type="radio" id="50A" name="Q50">
+				<label for="50A">Yes</label>
+				<br><input type="radio" id="50B" name="Q50">
+				<label for="50B">No</label>
+			</form>
+			<button onclick='checkAnswer("output");'>Check My Answers</button>
+			<h3 id="output">Your results will display here.</h3>
+			<h3>Need some help? Click <a href="enviro_waste.html">here</a> to go back to the waste article, <a href="enviro_small_solutions.html#compost">here</a> to go back to the composting section, or <a href="enviro_small_solutions.html#recycling">here</a> to go back to the recycling section.</h3>
+			<script>
+				function checkAnswer (output_location = "") {
+					const answer_key = [
+						"1B",
+						"2C",
+						"3C",
+						"4D",
+						"5A",
+						"6D",
+						"7B",
+						"8C",
+						"9C",
+						"10A",
+						"11A",
+						"12B",
+						"13B",
+						"14D",
+						"15C",
+						"16C",
+						"17A",
+						"18B",
+						"19B",
+						"20D",
+						"21C",
+						"22B",
+						"23D",
+						"24D",
+						"25B",
+						"26C",
+						"27A",
+						"28C",
+						"29C",
+						"30B",
+						"31A",
+						"32C",
+						"33B",
+						"34D",
+						"35A",
+						"36D",
+						"37C",
+						"38B",
+						"39C",
+						"40B",
+						"41B",
+						"42A",
+						"43A",
+						"44B",
+						"45A",
+						"46B",
+						"47B",
+						"48B",
+						"49A",
+						"50B"
+					]; //answer_key holds the IDs of the buttons with the correct answers.
+					const answer_rationale = [
+						"Municipal solid waste is defined as the everyday waste made by homes and businesses.",
+						"Out of the four options, only batteries are hazardous waste due to them containing volatile chemicals.",
+						"E-waste is short for electronic waste, things such as chips, wires, and anything else that is an electronic and was thrown away.",
+						"Out of the four options, only food scraps are a type of organic waste.",
+						"Medical waste is waste generated from medical institutions such as labs and hospitals.",
+						"Out of the four options, only aluminum cans are recyclable. Very few facilities recycle Styrofoam, contaminated tissue paper can ruin other materials, and broken glass is dangerous to recycling plant workers.",
+						"Improper waste disposal can release harmful susbtance into the air and water, resulting in pollution.",
+						"Burning plastic releases toxic chemicals.",
+						"Out of the four options, only shirts produce microplastics. The synthetic fabric common in clothes such as shirts and pants is plastic-based, so the fabric discharges microplastics during decomposition.",
+						"Food waste releases greenhouse gases during decomposition, adding to emissions.",
+						"E-waste contains harmful chemicals, such as mercury and dioxins, so treating e-waste improperly can jeopardize our health<sup>[<a href='https://www.genevaenvironmentnetwork.org/resources/updates/the-growing-environmental-risks-of-e-waste/'>1</a>]</sup>.",
+						"Out of the four options, only reusable containers help reduce waste.",
+						"Composting converts organic materials into nutrients for plants, so composting reduces organic waste.",
+						"Recycling reuses materials, preventing the extraction of new materials and lowering resource extraction's harmful effects such as deforestation.",
+						"Incineration is not sustainable, as burning waste releases many pollutants, including carbon dioxide and toxic fumes.",
+						"Households are the biggest producers of food waste&mdash;about half of all food waste comes from homes due to lack of meal planning, poorly storing food, or misinterpreting expiration dates<sup>[<a href='https://www.nrdc.org/stories/food-waste-101'>2</a>]</sup>.",
+						"Composting and planning meals prevent food from going to the trash.",
+						"Many synthetic fabrics are made of plastic-based fibers that release microplastics when decomposing. It is estimated that <q>a single laundry load of polyester clothes can discharge 700,000 microplastic fibers</q> or more<sup>[<a href='https://www.europarl.europa.eu/topics/en/article/20201208STO93327/the-impact-of-textile-production-and-waste-on-the-environment-infographics'>3</a>]</sup>.",
+						"Purchasing secondhand allows older clothes in good condition to stay out of the landfill.",
+						"There is not very much infrastructure dealing with e-waste in the world, so it can be very tricky to recycle e-waste.",
+						"Medical waste is waste produced from medical procedures and usually come from hospitals.",
+						"Cytotoxic waste is waste that causes cancer, mutations, or birth defects. Sharp objects are defined as sharps waste, objects laced with pathogens are defined as infectious waste, and toxic chemicals such as mercury or arsenic are definied as chemical waste.",
+						"Sharps waste are sharp objects such as needles or scalpels.",
+						"Since sharps waste are sharp, they can cause physical injuries and spread isease if contaminated.",
+						"Recycling is turning old material into new material.",
+						"Contamination is defined as adding non-recyclable waste to the recycling bin such as food or non-recyclable plastic.",
+						"Recycling paper saves water and energy used in the production of paper.",
+						"Out of the four options, glossy or glittery paper is non-recyclable, as the plastic can contaminate material.",
+						"Recycling reduces greenhouse gases through reduced energy use, as it is less energy demanding to recycle than to create new material. One example is aluminum, where recycling aluminum saves about 95% of the energy needed to make it from scratch<sup>[<a href='https://www.colorado.edu/ecenter/2022/04/26/debunking-recycling-myths'>4</a>]</sup>.",
+						"Sorting items correctly increases recycling rates, as less material is contaminated and thrown away.",
+						"Composting is the natrual decompositionof organic waste.",
+						"Out of the four items, only citrus peels are compostable. Meat grease, aluminum, and plastic are not meant to be added to compost.",
+						"Composting reduces food waste by allowing the nutrients inside food to be used to grow plants.",
+						"When composting, avoid adding meat or dairy, as they attract animals and cannot be composted by backyard compost piles<sup>[<a href='https://www.epa.gov/recycle/composting-home'>5</a>]</sup>.",
+						"Out of the four options, only incinerating wrappers is not an example of reusing material.",
+						"Resin Type #6&mdash;also called polystyrene, Styrofoam, or PS&mdash;is not usually recyclable, as very few facilities accept Styrofoam to be recycled.",
+						"Napkins often come into contact with food, so they are not recycled in order to prevent contamination.",
+						"The triangle and number signifies what type of plastic the item is made out of.",
+						"Recyclables have to be clean and dry so they are not contaminated.",
+						"Out of the four options, only unbroken, clean glass bottles are recyclable.",
+						"Garden hoses are not recyclable, as they can get tangled.",
+						"Unbroken glass bottles are accepted in a variety of facilities.",
+						"Cardboard boxes are recyclable, as long as they do not have food stains, glossiness, or other contaminants.",
+						"Plastic toys are not recyclable.",
+						"Metal cans, including aluminum are widely accepted.",
+						"Wood and grass are not recyclable, as they can contaminate machines. Grass and small pieces of wood should be composted instead, and wooden items in good condition should be donated.",
+						"Paint cans are not recyclable, as the paint residue inside can contaminate batches.",
+						"Plastic bags are not recyclable.",
+						"Paperback books are recyclable.",
+						"Windows and mirrors are not recyclable."
+					];
+					var score = 0; //score holds the amount of correct answers.
+					var result = "Questions you got wrong: <ul>";
+
+					for (var i = 0; i < answer_key.length; i++) {
+						if (document.getElementById(answer_key[i]).checked) {
+							score++;
+						} else {
+							result = result + "<li>" + (i + 1) + ". The correct answer is " + answer_key[i].substring(answer_key[i].length - 1) + ". " + answer_rationale[i] + "</li>";
+						}
+					}
+
+					result = "You scored a " + score + " out of " + answer_key.length + ". " + result + "</ul>";
+					document.getElementById(output_location).innerHTML = result;
+				}
+			</script>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

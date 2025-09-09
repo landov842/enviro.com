@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Renewable Energy</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(255,0,65,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="fenviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Renewable Sources of Energy</h2>
+				<p>A large amount of our electricity comes of fossil fuels, non-renewable resource that cause our planet to heat up like an oven. Instead, we should use alternatives, renewable sources such as wind and solar that produce energy without releasing greenhouse gases.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<h2>Renewable Energy</h2>
+			<p>Renewable energy sources are sources of energy that are abundant and easily replenished. Unlike fossil fuels, common renewable energy sources produce almost no greenhouse gas emissions except for biomass. Renewable sources are also cheaper due to widespread availabity. In fact, <q>the cost of electricity from solar power fell by 85 percent between 2010 and 2020</q> (United Nations). Furthermore, they are healthier for people since renewable sources of energy produce barely any air pollution. There are many different types of renewable energy sources.</p>
+			<h2>Solar Energy</h2>
+			<p>Solar energy is electricity or heat produced from the Sun's radiation. Over time, solar power has become popular due to its near-endless supply and nonpolluting character. The Sun already drives many natural processes, such as photosynthesis and the water cycle, so solar energy should be able to support some of our energy needs. Furthermore, solar energy is free, despite the fact that collection and storage can be more expensive (Brittanica). Acccording to Brittanica, solar energy is often used for heat or electricity through devices such as:
+				<ul>
+					<li>Flat-plane collectors, devices used for heating homes and water</li>
+					<li>Solar ponds, bodies of salt water used for the production of chemicals and textiles and the warming of swimming pools and greenhouses</li>
+					<li>Solar ovens, which are used to cook food</li>
+					<li>Solar panels and solar plants for producing electricity. This can include floatovoltaics, solar panels that float in water, or agrivoltaics, using land for both agriculture and solar power at the same time (Wikipedia)</li>
+					<li>Solar distillation for water treatment</li>
+				</ul></p>
+			<p>Solar power has both advantages and disadvantages. Not only is sunlight abundant and free, but solar panels <q>last for a long time, about 20 years</q> (Nat Geo). However, solar technology can be expensive, and sunlight might not show up depending on weather or time of day, so solar power should not be the only source of energy in a community (Nat Geo).</p>
+			<h2>Wind Power</h2>
+			<p>Wind power is when blowing wind is used to move turbines that generate power. Existing for centuries in the form of windmills, wind power is a widely used form of renewable energy. The turbine uses wind to push blades that twist a generator to create electricity. Wind power is genuinely admired for being cheap and climate friendly, but there are some setbacks. For instance, the area where wind is abundant and strong is not usually near where demanding high-population centers are, so power lines and other distributions systems will be added to take the power to consumers (Brittanica). Also, wind turbines can be visually displeasing and produce amounts of noise, but wind turbines have "been found to be no louder than that experienced by traveling in a moving car" (Brittanica). There is a possibility that birds may get killed by running into the turbines, but "experts have shown that modern turbines have a small effect on bird populations" (Brittanica). Lastly, <q>wind speed changes constantly, depending on the time of day, weahter, and geographic location,</q> so wind power can be unpredictable at times (Nat Geo).</p>
+			<h2>Hydroelectric Energy</h2>
+			<p>Hydroelectric energy is a type of energy that uses flowing water to push a turbine. Usually, water is held at a higher elevation and flows downwards through pipes to push turbines. The trubines are then used to drive a generator that creates electricity. Hydroelectric power plants are usually located in a dam to raise the water's height so it can push the turbine. Energy needs can vary throughout the day, so when the energy need is lower, the generators are used as motors to push water back into the reservoir (Brittanica). Hydroelectricity has several benefits, as it is less dependent on weather and location as other types of renewable energy, but hydroelectricity can also damage fish that travel through the dam.</p>
+			<h2>Geothermal Energy</h2>
+			<p>Geothermal energy is the heat below Earth's surface that can be harnessed for heating and electricity generation. Though it can be difficult to use to generate energy, geothermal energy is a useful alternative to fossil fuels. In order to extract heat from the ground, fluids such as water are passed into the ground and taken back up to the surface. Locating where to extract energy can be difficult due to the high energy needed for electrical production, though. Moreover, large amounts of water are needed to make steam, so that makes geothermal energy inefficient in terms of water use (Nat Geo). Geothermal energy has been used to heat water for swimming pools and spas and to heat homes (Brittanica). Geothermal energy has also been used for electric power generation by using water heated into steam by the Earth's crust to push a turbine hooked up to a generator (Brittanica).</p>
+			<h2>Biomass</h2>
+			<p>Biomass is fuel sourced from organic material. Used for heating, electricity generation, and transportation fuel, biomass can come from a variety of sources, including wood, agricultural waste, trash, manure, and sewage (EIA). Biomass can be converted to a variety of ways, such as (EIA):
+				<ul>
+					<li>Direct burning to produce heat</li>
+					<li>Thermochemical conversion through the use of heating and pressurizing to create biofuels</li>
+					<li>Converting fats and greases into biodiesel chemically</li>
+					<li>Fermenting organic material to produce ethanol and methane as fuel</li>
+				</ul></p>
+			<p>Though the fuels are biologically sourced and can help with climate change, biomass production can increase greenhouse gas emissions or damage biodiversity (Wikipedia). After all, burning biomass still produces CO<sub>2</sub>. Also, biomass can be inefficient relating to land usage, as <q>the average lifecycle surface power densities for biomass, wind, hydro, and solar power production are 0.30 W/m<sup>2</sup>, 1 W/m<sup>2</sup>, 3 W/m<sup>2</sup>, and 5 W/m<sup>2</sup>, respectively</q> with heat for biomass and electricity for the rest (Wikipedia).</p>
+			<h2>Other Types of Renewable Energy</h2>
+			<ul>
+				<li>Sand batteries, large tanks filled with soapstone that absorb heat to then use said heat in heating water, steam, or air (Wikipedia)</li>
+				<li>Marine energy, electricity powered by waves, tides, and salinity (Wikipedia)</li>
+				<li>Algae fuels, or producing fuel from algae (Wikipedia)</li>
+				<li>Artificial Photosynthesis (Wikipedia)</li>
+			</ul>
+			<h3>Want to test your knowledge? Click <a href="enviro_renewable_energy_quiz.html">here</a> to take a quiz on renewable energy.</h3>
+			<p>References: <a href="https://www.un.org/en/climatechange/raising-ambition/renewable-energy">United Nations</a>, <a href="https://www.britannica.com/science/solar-energy/Electricity-generation">Brittanica</a>, <a href="https://www.eia.gov/energyexplained/biomass/">Energy Information Administration</a>, <a href="https://en.wikipedia.org/wiki/Bioenergy">Wikipedia</a>, <a href="https://education.nationalgeographic.org/resource/renewable-energy/">National Geographic</a></p>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

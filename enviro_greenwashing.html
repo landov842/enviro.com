@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Greenwashing</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(25,220,145,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="fenviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Greenwashing</h2>
+				<p>Companies are avoiding addressing or lying about their environmental impact. With greenwashing amok, it can be hard to tell what's true and what's false.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<h2>Greenwashing</h2>
+			<p>Now that we have realized how much we are damaging the environment, demand for environmentally friendly products have soared. As a result, companies have pledged to make their products safer for the environment ... and not deliver. While people are demanding to have true eco-friendly products, many companies have found ways to manipulate customers into thinking they are buying an environmentally friendly product when in reality, they are not. This process is called greenwashing. While there are a variety of greenwashing tactics that companies use, the most common are:
+				<ul>
+					<li>Claiming to have a plan to lower carbon emissions and achieve net-zero production when there actually is no credible plan (United Nations)</li>
+					<li>Intentionally being vague about a company's operation or materials used (United Nations)</li>
+					<li>Intentionally applying misleading buzzwords such as "green" or "eco-friendly", which do not have standard definitions and can be misinterpreted (United Nations)</li>
+					<li>Implying that a minor change has a major impact (United Nations)</li>
+					<li>Emphasizing one environmental attribute while ignoring others (United Nations)</li>
+					<li>"Hidden trade-off"&mdash;communicating sustainability practices in isolation&mdash;e.g. fabric made from recycled materials that is produced in a high-emitting, water polluting factory (United Nations)</li>
+					<li>Misleading imagery (FSC)</li>
+					<li>Exaggerated claims (FSC)</li>
+					<li>Untrustworthy Certifications (FSC)</li>
+					<li>Stalling efforts to change (AACSB)</li>
+					<li>Shifting the blame onto customers (AACSB)</li>
+				</ul></p>
+			<p>While greenwashing is common, you don't have to let yourself fall victim to it. Click <a href="enviro_small_solutions.html#greenwashing">here</a> to get some tips on how to detect greenwashing.</p>
+			<h2>Examples of Greenwashing</h2>
+			<ul>
+				<li>Volkswagen "Clean Diesel" Scandal: In 2015, Volkswagen used software in diesel vehicles that allowed the cars to cheat on carbon emissions test, making the cars appear cleaner than they actually were. (FSC)</li>
+				<li>Shell's Climate Strategy: In 2023, Shell was sued by ClientEarth, an organization on environmental issues, because Shell's climate strategy was not enough to meet climate targets. (FSC)</li>
+				<li>Katjes's "Climate Neutral" Label: Katjes, a German candy company, falsely claimed that its products were "climate neutral", so in 2024, the German Federal Court of Justice determined that Katjes was engaging in deceptive marketing practices. (FSC)</li>
+				<li>Starbucks's Strawless Lid: In some locations in 2019, Starbucks introduced a strawless lid for its commitment to reduce its environmental impact. However, these strawless lids used more plastic than the old lid and its straw combined! To make matters worse, these lids were rarely recycled, so more plastic ended up in landfills. (AACSB)</li>
+				<li>Ryanair's Low-Emissions Claim: In 2020, the airline Ryanair advertised that it was the airline with the lowest emissions, but had no data to back it up. (AACSB)</li>
+				<li>Nestl&eacute;'s Packaging Fiasco: In 2018, Nestl&eacute; stated that it had ambitions for its packaging to be recyclable or reusable by 2025. However, Nestl&eacute; came under scrutiny that its policy was too vague and did not include clear targets or additional efforts to aid consumers' recycling. (Earth.org)</li>
+				<li>IKEA's Illegal Logging: In June 2020, it was discovered that IKEA was linked with illegal logging in Ukraine. At the time, IKEA was seen as a beacon of sustainability. (Earth.org)</li>
+				<li>Plastic Bottle Hypocrisy: Plastic water bottle companies often include depictions of nature on their products. This is an ironic form of greenwashing, as plastic water bottle are intended to be single-use. (Earth.org)</li>
+				<li>H&M's Misleading Marketing: In 2019, H&M launched a new line of clothing called Conscious. H&M claimed that Conscious was sustainable and made from organic cotton and recycled polyester. However, The Norwegian Customer Authority criticized H&M for using misleading marketing. (Earth.org)</li>
+			</ul>
+			<h2>Downsides of Greenwashing</h2>
+			<ul>
+				<li>Discouraging Sustainable Practices: When companies greenwash make themselves appear sustainable without real effort, it reduces the incentive to invest in cleaner technologies. (FSC)</li>
+				<li>Delaying Credible Climate Solutions: Because companies can use greenwashing to pretend to be eco-friendly, they will not implement real solution to climate change and other environmental issues. (FSC)</li>
+				<li>Increased Waste: Some greenwashing tactic encourage increased buying of a certain product, which uses up more resources and produces more waste. (FSC)</li>
+				<li>Damaged Reputation of Businesses and Loss of Sales: When a company's greenwashing is exposed, customers feel misled and deceived. This results in a loss of trust, so people tend to avoid the brand, preventing the company from earning money. (FSC)</li>
+				<li>Regulatory Scrutiny and Litigation: Governments are cracking down on greenwashing, so companies may get sued or fined for greenwashing. Furthermore, consumers have also become more concerned about the environment, so lawsuits over greenwashing may increase. (FSC)</li>
+			</ul>
+			<p>References: <a href="https://www.un.org/en/climatechange/science/climate-issues/greenwashing">United Nations</a>, <a href="https://fsc.org/en/blog/what-is-greenwashing">Forest Stewardship Council (FSC)</a>, <a href="https://www.aacsb.edu/insights/articles/2023/10/how-to-avoid-the-pitfalls-of-greenwashing">Association to Advance Collegiate Schools of Business (AACSB)</a>, <a href="https://earth.org/greenwashing-companies-corporations/">Earth.org</a></p>
+			<h3>Want to test your knowledge? Click <a href="enviro_greenwashing_quiz.html">here</a> to take a quiz.</h3>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

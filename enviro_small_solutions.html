@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Small Solutions</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(0,255,255,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+			.table_info th {width:50%;}
+			.table_info td {font-size:18px;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="fenviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Small Solutions</h2>
+				<p>Even though it may seem impossible for one person to make a difference, you can still do the right thing. An action's an action, no matter how small.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<h2 id="recycling">#1: Recycle all materials that you can.</h2>
+			<p>Recycling can be very successful at preventing trash from rotting in landfills. According to the EPA, <q>the recycling rate of generated packaging and containers was 53.9 percent</q> in 2018--more than half, preventing half of our trash from rotting in some landfill somewhere. This prevents greenhouse gasses from being pumped into the atmosphere--more than 193 million metric tons in 2018, the EPA estimates. Furthermore, recycling material is more efficient than getting the same material from scratch: <q>recycling aluminum saves 95% of the energy needed to make a can from scratch,</q> according to the University of Colorado. Also, a large variety of household objects can be recycled. However, just because some items are recyclable doesn't mean all of them are. Here is a guide to what is and isn't recyclable:</p>
+			<table class="table_info">
+				<tr>
+					<th>
+						RECYCLE
+					</th>
+					<th>
+						DON'T RECYCLE
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li>Newspapers (EPA)</li>
+							<li>Magazines (EPA)</li>
+							<li>Pizza Boxes&mdash;should be cleaned (EPA)</li>
+							<li>Takeout containers&mdash;food residue should be scraped or rinsed off (EPA)</li>
+							<li>Mail (EPA)</li>
+							<li>Cardboard boxes&mdash;should be flattened first (EPA)</li>
+							<li>Gift wrap wtihout a shiny or laminated coating (EPA)</li>
+							<li>Plastic Bottles and Caps (EPA)</li>
+							<li>Aluminum Cans (EPA)</li>
+							<li>Aluminum Foil (EPA)</li>
+							<li>Batteries&mdash;should not be thrown in recycling bin. Instead, go to a store or facility that specializes in recycling batteries. (EPA)</li>
+							<li>Tires&mdash;should be taken to tire retailer or recycling facility that accepts tires (EPA)</li>
+							<li>Electronics&mdash;must be taken to specific collection sites (EPA)</li>
+							<li>Steel Cans (All-County)</li>
+							<li>Paperback books (Boulder County)</li>
+							<li>Notepads and spiral notebooks&mdash;hard covers should be removed (Boulder County)</li>
+							<li>Paper towel and toilet paper tubes (Boulder County)</li>
+							<li>Tissue boxes (Boulder County)</li>
+							<li>Greetings and index cards (Boulder County)</li>
+							<li>Fax paper and computer printouts (Boulder County)</li>
+							<li>Ads and brochures (Boulder County)</li>
+							<li>Empty aerosol cans&mdash;can't contain chlorofluorocarbons (CFCs) (Boulder County)</li>
+							<li>Polyethylene Terephthalate/PET/PETE/Resin Type #1 (Boulder County)<br>To tell what type of plastic something is made out of, look at the recycling symbol with the number and letters. The number seperates plastic resin types into seven categories, and the letters are an abbreviation of the plastic resin's name. Either the number or the abbreviation can be used to identify the type of plastic though.</li>
+							<li>High-Density Polyethylene/HDPE/Resin Type #2 (Boulder County)</li>
+							<li>Polypropylene/PP/Resin Type #5 (Boulder County)</li>
+							<li>Containers for laundry detergent, shampoo, soap, and vitamins&mdash;should be emptied and rinsed beforehand (Boulder County)</li>
+							<li>Plastic crates and buckets (Boulder County)</li>
+							<li>Cartons&mdash;rinse and remove lids (Columbus)</li>
+							<li>Glass bottles and jars&mdash;all colors accepted, should not be broken (Columbus)</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>Building material (Recycle Spot)</li>
+							<li>Plastic Cutlery (Recycle Spot)</li>
+							<li>Hazardous substance containers (Recycle Spot)</li>
+							<li>Medical-related Plastic&mdash;e.g. prescription bottles, diapers, gloves, syringes (Recycle Spot)</li>
+							<li>Plastic tubes (Recycle Spot)</li>
+							<li>Boxes and papers soiled with food (All-County)</li>
+							<li>Plastic grocery bags (All-County)</li>
+							<li>Material coated in plastic&mdash;e.g. juice boxes, frozen food packaging, coffee cups (All-County)</li>
+							<li>Broken or sharp objects (All-County)</li>
+							<li>Food waste or food-tainted items like napkins or paper towels (Univeristy of Wisconsin)</li>
+							<li>Ceramics (Univeristy of Wisconsin)</li>
+							<li>Packing peanuts and bubble wrap (University of Wisconsin)</li>
+							<li>Plastic toys (University of Wisconsin)</li>
+							<li>Polystyrene/Styrofoam/Resin Type #6 (University of Wisconsin)</li>
+							<li>Plastic wrap (Univeristy of Wisconsin)</li>
+							<li>Compostable plastic (EPA)</li>
+							<li>Lawn material&mdash;should be composted instead (EPA)</li>
+							<li>Clothing (North Wilkesboro)</li>
+							<li>Toys, plastic or otherwise (North Wilkesboro)</li>
+							<li>Garden hoses (North Wilkesboro)</li>
+							<li>Hard cover books (North Wilkesboro)</li>
+							<li>Grass, dirt, and rocks (North Wilkesboro)</li>
+							<li>Hand soap pump dispenser tops (The Guardian)</li>
+							<li>Wine glasses (The Guardian)</li>
+							<li>Windows and mirrors (The Guardian)</li>
+							<li>Straws (The Guardian)</li>
+							<li>Soft plastic or laminated foil packaging&mdash;e.g. pet and baby food pouches (The Guardian)</li>
+							<li>Pots and pans (The Guardian)</li>
+							<li>Propane and oxygen tanks (Garland)</li>
+							<li>Containers for car parts (Garland)</li>
+							<li>Light bulbs and string of lights (Garland)</li>
+							<li>Paint cans (Garland)</li>
+							<li>Chains, wires, ropes, cords, or anything that easily gets tangled (Garland)</li>
+							<li>Food wrapping (Garland)</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<p>References: <a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/containers-and-packaging-product-specific">The EPA (Containers Statistics)</a>, <a href="https://www.epa.gov/recycle/recycling-basics-and-benefits">The EPA (Recycling Benefits)</a>,<a href="https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables">The EPA (How to Recycle)</a>,<a href="https://www.colorado.edu/ecenter/2022/04/26/debunking-recycling-myths">University of Colorado</a>, <a href="https://www.recyclespot.org/how-to-recycle/plastic/non-recyclable-plastics">Recycle Spot</a>, <a href="https://www.allcountyrecycling.com/blog/2018/recyclable-non-recyclable-materials-in-our-environment.html">All County Recycling</a>, <a href="https://www.uwlax.edu/recycling/what-to-recycle/non-recyclable-items/">University of Wisconsin</a>, <a href="https://bouldercounty.gov/environment/recycle/materials-list/#1616713971309-d6888181-5076">Boulder County, Colorado</a>, <a href="https://north-wilkesboro.com/208/Recyclable-Non-Recyclable-Reusable-Items">North Wilkesboro, North Carolina</a>, <a href="https://www.theguardian.com/environment/2018/mar/16/which-items-cant-be-recycled-plastic-bags-coffee-cups">The Guardian</a>, <a href="https://www.garlandtx.gov/449/Non-Recyclable-Items">Garland, Texas</a>, <a href="https://www.columbus.gov/Services/Trash-Recycling-Bulk-Collection/How-to-Dispose-or-Recycle/How-to-Recycle">Columbus, Ohio</a></p>
+			<h2>#2: Spend and waste less on the holidays.</h2>
+			<p>One of the largest sources of waste is due to the holidays. When the holidays come around, we often try to make the holidays worthwhile by buying large amounts of food and presents. However, this results in large amounts of waste being created. According to the Center for Biological Diversity, <q>the United States creates 5.8 million tons more waste in December than in other months of the year.</q> While there may be other reasons for this increase, one big reason for this increase is due to Christmas, where we often buy large amounts of gift wrap, food, and even presents that are ultimately thrown away. In fact, in 2017, about one third of people threw away gifts that they didn't like, according to the Center for Biological Diversity. Waste is a huge problem during the holidays, and it doesn't only apply to Christmas:
+				<ul>
+					<li>Easter&mdash;Hundreds of millions of plastic Easter eggs are made each year, and many eggs are often either used once and thrown away or abandoned in their hiding spots in the lawns. Furthermore, plastic doesn't decompose like other materials, exacerbating waste problems. (Center for Biological Diversity)</li>
+					<li>Halloween&mdash;Every year, 1.3 billion pounds of pumpkins get thrown away. (Center for Biological Diversity)</li>
+					<li>Thanksgiving&mdash;312 millions pounds of food will be thrown away at Thanksgiving, with 200 being turkey meat (Center foir Biological Diversity)</li>
+					<li>Valentine's Day&mdash;145 million cards and more than 36 million chocolate boxes are sold every year for Valentine's Day, being wrapped up in unrecyclable packaging. To make matters worse, more than 30 million recipients of these gifts don't even want them and likely throw them in the trash. (Center for Biological Diversity)</li>
+				</ul></p>
+			<p>While waste is a huge problem during the holidays, it is still possible to lower the amount of waste you produce during the holidays. Some more eco-friendly ways to spend the holidays include:
+				<ul>
+					<li>Use secondhand gifts instead of buying something new.</li>
+					<li>Have a secret gift exchange, and desingate a dollar limit in advance.</li>
+					<li>Experiential gifts, or doing an activity with someone you love. Not only does it produce less waste, but it also cna bring a worthwhile sense of happiness to the person that you spend time with.</li>
+				</ul></p>
+			<p>References: <a href="https://simplifytheholidays.org/stats-and-facts#a02ca2cd-3ec4-43ed-b043-f94b88287c26">Center for Biolocial Diversity (Stats and Facts)</a>, <a href="https://simplifytheholidays.org/better-gift-giving">Center for Biological Diversity (Options for Less Wasteful Gifts)</a>, <a href="https://simplifytheholidays.org/experiential-gift-giving">Center for Biological Diversity (Experiential Gift Giving)</a></p>
+			<h2>#3: Avoid fast fashion.</h2>
+			<p>Fast fashion, or the mass production of clothing at cheap prices to keep up with the latest fashion trends, is another culprit of environmental destruction. For instance, fast fashion contributes significantly to greenhouse gas emissions--about 10% of global emissions, according to the Center for Biological Diversity. Part of this comes from the use of animal-based cloth, such as wool, and synthetic fibers created from fossil fuels. Furthermore, fast fashion produces textiles at an unprecedented rate, resulting in a hefty sum of waste produced. Combined with the poor quailty of the clothing, this results in large amounts of fabric decomposing in landfills or being burnt in incinerators. Additionally, since fast fashion clothing are made with plastic-based materials, fast fashion has become a major source of microplastics. Finally, fast fashion doesn't just stop at environmental exploitation--workers are also exploited by working in hazardous conditions in low pay while the compaanies hiring them rake in huge profits. To help stop these greedy companies from profitting of environmental and worker exploitation, avoid buying cheaply made articles of clothing. Instead, support more locally and sustainably sourced clothing businesses.
+			<br>References: <a href="https://www.biologicaldiversity.org/programs/population_and_sustainability/sustainability/fast_fashion">Center for Biological Diversity</a></p>
+			<h2>#4: Save energy at home.</h2>
+			<p>Much of the electricity and heat we get in our homes comes from fossil fuels--coal, oil, and natural gas. As a result, one way to prevent greenhouse gasses from being released to power our homes is to simply use less energy. You can save energy by:
+				<ul>
+					<li>Using heating/cooling less (United Nations)</li>
+					<li>Switching to LED light bulbs and other energy-efficient appliances (United Nations)</li>
+					<li>Washing laundry with cold water (United Nations)</li>
+					<li>Hanging things to dry instead of using a dryer (United Nations)</li>
+					<li>Adding more/better insulation to your home (United Nations)</li>
+					<li>Using an electric heat pump instead of a oil/gas furnace (United Nations)</li>
+					<li>Power off or unplug your TV, computer, video game consoles, or cable boxes when you are not using them (NRDC)</li>
+					<li>Measure how much electricity you are using to see where your energy use goes (NRDC)</li>
+					<li>Lower down the temperature in the winter and raise it up in the summer (NRDC)</li>
+					<li>Buy a smart thermostat to change the temperature for optimal performance (Energy Star)</li>
+					<li>Make sure no air vents are covered so air can circulate freely (Energy Star)</li>
+					<li>If your dryer has a moisture sensor, turn it on to prevent over-drying (Energy Star)</li>
+					<li>Use smart power strips to close off energy when electronics are not in use (Satellite Beach)</li>
+					<li>Use less hot water. (Satellite Beach)</li>
+					<li>Examine and seal or upgrade your windows to prevent indoor air from escaping (Satellite Beach)</li>
+					<li>Use natural light from the Sun instead of light bulbs. (Satellite Beach)</li>
+				</ul></p>
+			<p>References: <a href="https://www.un.org/en/actnow/ten-actions">United Nations</a>, <a href="https://www.nrdc.org/stories/easy-ways-save-energy-home">NRDC</a>, <a href="https://www.energystar.gov/products/recent_program_updates/low-no-cost-tips">Energy Star</a>, <a href="https://satellitebeach.gov/residents/sustainable_satellite/living___working_sustainably/electricity_at_home.php">Satellite Beach, Florida</a></p>
+			<h2>#5: Use alternatives to driving a gas-powered car.</h2>
+			<p>Oftentimes, we use a gas-guzzling car or truck to get where we need to go, resulting in excessive amounts of carbon dioxide filling the air. However, there are a variety of options to get to where you need to go without using a gas-guzzling car. If you want to go places while staying active, then consider walking or biking instead of driving. In fact, not only can it <q>reduce your carbon footprint by up to 2 tons of <abbr title="carbon dioxide equivalent">CO<sub>2</sub>e</abbr> per year,</q> (United Nations) but it can also boost your health and fitness. If you are traveling farther away and too long for walking or biking distance, you can use public transportation, like a train or a bus, or you can carpool. If you still wish to use a car, then you can buy a hybrid or electric vehicle, as <q>switching from a gasoline or diesel-powered engine to an electric vehicle can reduce your carbon footprint by up to 2 tons of CO<sub>2</sub>e per year. If you want to lower your carbon footprint, consider an alternative to driving a car.
+			<br>References: <a href="https://www.un.org/en/actnow/ten-actions">United Nations</a></p>
+			<h2>#6: Eat more plants instead of meat.</h2>
+			<p>Eating more vegetables and fruits while eating less meat and dairy can also lower your environmental impact. According to the United Nations, producing plant-based foods usually produces less greenhouse gas emissions. Specifically, <q>switching to a plant-based diet could save you around 0.8 tons of CO<sub>2</sub>e each year</q> (BBC). Furthermore, farming plants is significantly more efficient than farming livestock in terms of land and water usage. In fact, BBC estimates that <q>it would free up 75% of the world's agricultural land.</q> Eating plants instead of meat will help lower your carbon footprint. Some alternatives to eating meat are:
+				<ul>
+					<li>Eggs. They provide protein and choline, a nutrient that can help lower the likelihood of breast cancer. (Johns Hopkins)</li>
+					<li>Tree nuts, such as walnuts, almonds, and pecans. They provide protein, fiber, vitamin E, and monounsaturated fats, which help lower cholsterol levels. (Johns Hopkins)</li>
+					<li>Legumes, such as beans, peas, lentils, and peanuts. They provide protein, fiber, and essential minerals such as calcium, potassium, magnesium, and iron. (Johns Hopkins)</li>
+					<li>Soy. It provides protein, vitamins B6 and B12, calcium, magnesium, and potassium. (Johns Hopkins)</li>
+					<li>Yogurt and kefir (a yogurt-like drink). They provide protein, calcium, and probiotics to maintain good digestive health. (Johns Hopkins)</li>
+					<li>Quinoa. It provides protein and is an easy replacement for rice and pasta. (British Heart Foundation)</li>
+					<li>Seeds. They provide protein and healthy unsaturated fats. (British Heart Foundation)</li>
+					<li>Milk and cheese. They provide protein and calcium. (British Heart Foundation)</li>
+					<li>Spinach. A cup of spinach has the same amount of protein and half as many calories as an egg. (New York Presbyterian)</li>
+					<li>Artichokes and mushrooms. They have a lot of protein compared to other vegetables. (New York Presbyterian)</li>
+				</ul></p>
+			<p>References: <a href="https://www.un.org/en/actnow/ten-actions">United Nations</a>, <a href="https://www.bbc.com/future/article/20230421-what-are-the-best-ways-to-reduce-carbon-footprint">BBC</a>, <a href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/5-protein-packed-foods-for-healthy-meatless-meals">Johns Hopkins University</a>, <a href="https://www.bhf.org.uk/informationsupport/heart-matters-magazine/nutrition/protein/how-to-get-protein-without-the-meat">British Heart Foundation</a>, <a href="https://www.nyp.org/patients-and-visitors/advances-consumers/issues/12-alternative-protein-sources-for-vegetarians">New York Presbyterian</a></p>
+			<h2 id="greenwashing">#7: Look out for greenwashing.</h2>
+			<p>Companies often use greenwashing tactics to trick customers into buying their products. While it may seem that greenwashed products are sustainable at first, they are actually not much different than non-sustainable products. If you pay careful attentionto the packaging or adversity, though, you can spot if the product is greenwashed or not.
+			<br>Tips to avoid greenwashing:
+				<ul>
+					<li>Watch out for vague sustainability claims. (FSC)</li>
+					<li>Don't fall for misleading photos or graphics. (FSC)</li>
+					<li>Be wary of the bait and switch, or the highlighting of a small, sustainable feature to divert attention from environmental problems. (FSC)</li>
+					<li>Watch out for false or unsupported claims. (BBC)</li>
+					<li>Be wary of buzzwords such as "green", "eco", or "sustainable". (BBC)</li>
+					<li>Look out for carbon offsetting, or companies attempting <q>to balance their own emissions by finding other ways to remove an equivalent amount amount of greenhouse gases</q> instead of cutting how much greenhouse gases they actually produce (BBC).</li>
+					<li>Check if the product and its packaging are recyclable. (BBC)</li>
+					<li>Pay attention to certifications from third-parties. Some of the most well-regarded ones are:<ul>
+						<li>Overall sustainability: B Corp, Cradle to Cradle, Green America Business Network (NRDC)</li>
+						<li>Appliances: Energy Star, EPEAT (NRDC)</li>
+						<li>Cleaning and cosmetics: Environmental Working Group, Made Safe, EPA SaferChoice (NRDC)</li>
+						<li>Clothing: Global Organic Textile Standard, Bluesign (NRDC)</li>
+						<li>Food: USDA Organic, Non-GMO Project, Monterey Bay Aquarium Seafood Watch's "Best Choice" (NRDC)</li>
+						<li>Paper products: Forest Stewardship Council, BPI (NRDC)</li>
+					</ul></li>
+					<li>Trust your gut if something seems suspicious. (NRDC)</li>
+				</ul></p>
+			<p>To test your knowledge, click <a href="enviro_greenwashing_quiz.html">here</a> to take a quiz.</p>
+			<p>References: <a href="https://fsc.org/en/blog/what-is-greenwashing">Forest Stewardship Council (FSC)</a>, <a href="https://www.nrdc.org/stories/learn-spot-greenwashing">NRDC</a>, <a href="https://www.bbc.com/news/business-59119693">BBC</a></p>
+			<h2 id="compost">#8: Compost your food waste.</h2>
+			<p>One way to lower the amount of waste going to landfills is composting. Composting is <q>the managed, aerobic (oxygen-required) biological decomposition of organic materials by microorganisms</q> (EPA). In other words, composting is using bacteria to decompose food waste in a controlled setting. Composting has many benefits, including:
+				<ul>
+					<li>Reducing methane emissions from landfills (EPA)</li>
+					<li>Reduces waste (EPA)</li>
+					<li>Recycles organic material by allowing it to be used in soil (EPA)</li>
+					<li>Recovers nutrients from organic waste (EPA)</li>
+					<li>Reduces need of artificial fertilizers and pesticides (EPA)</li>
+					<li>Can help regenerate poor soil (EPA)</li>
+					<li>Stores carbon in the soil (EPA)</li>
+				</ul></p>
+			<h3>How to Compost (Information Obtained From EPA)</h3>
+			<table class="table_info">
+				<tr>
+					<th>
+						You Should Add:
+					</th>
+					<th>
+						Avoid Adding:
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li>Nitrogen-Rich Materials (Greens)<ul>
+								<li>Fruit and Vegetable Scraps</li>
+								<li>Grass Clippings</li>
+								<li>Coffee Grounds and Paper Filters</li>
+								<li>Paper Tea Bags (no staples)</li>
+								<li>Crushed Eggshells</li>
+							</ul></li>
+							<li>Carbon-Rich Materials (Browns)<ul>
+								<li>Dry leaves</li>
+								<li>Twigs</li>
+								<li>Shredded Paper (non-glossy, uncolored)</li>
+								<li>Shredded Cardboard (no wax, tape, or glue)</li>
+								<li>Wood Chips</li>
+							</ul></li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>Meat, Fish, or Bones</li>
+							<li>Cheese or Dairy</li>
+							<li>Fats, Oils, or Grease</li>
+							<li>Large Amounts of Cooked Food</li>
+							<li>Herbicide-Treated or Diseased Plants</li>
+							<li>Treated or Painted Wood</li>
+							<li>Pet Waste and Cat Litter</li>
+							<li>Glossy Paper</li>
+							<li>Stickers</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<ol>
+				<li>Determine how you will store your materials. For fruit and vegetables, you should keep them in a closed container on your kitchen counter, under the sink, or in the fridge. For browns, allocate an area outside for leaves, twigs, and other browns.</li>
+				<li>Set aside space for your compost pile. Make sure that it is easy to access year-round and is near a water source. Avoid putting it up against a fence. It doesn't matter if the space is in shade, as your compost will break down regardless if it is in sun or shade.</li>
+				<li>Build or buy a bin. The bin can be constructed from materials such as wood, wire, or cinder, or it can be enclosed like a barrel.</li>
+				<li>Chop up your scraps into smaller pieces. This will help make the materials in the pile break down faster.</li>
+				<li>Start your pile with a 4-inch to 6-inch layer of bulkier browns such as twigs. This layer absorbs any extra liquids and allows air to circulate at the base of the pile.</li>
+				<li>Layer your greens and browns like lasagna. Put some greens in a layer first, then switch to browns, then switch to greens, etc. When adding greens and browns, the volume of browns should be at least two or three times as much as the volume of greens, and greens should be covered by 4 to 8 inches of browns. Add water to dampen the pile if necessary. It should enough moisture as a wrung-out sponge.</li>
+				<li>Maintain your compost pile. As the materials in the pile start to decompose, the temperature should begin to rise, and if well maintained, can reach 130&deg;F to 160&deg;F. Turning and mixing the pile will help speed up decomposition. Keep an eye out of moisture, odor, and temperature.<ul>
+					<li>If the pile is too dry, activity in the pile will slow or stop. Add water and mix the pile.</li>
+					<li>If the pile smells bad, the pile may be too moist. Mix in more browns or dry material.</li>
+					<li>If the pile does not hat up, mix in more greens.</li>
+				</ul></li>
+				<li>Harvest the compost. When the compost is no longer heating up after mixing, and when there are no visible food scraps, let the pile to cure for about four weeks. After curing, the pile shuld have shrunk to about one third of its original size. Depending on the quality of the compost, it should be ready for use after three months to a year. Before use, sift your compost for any materials that didn't break down, such as twigs, eggshells, stickers, or seeds. Some materials, such as eggshells or seeds, can be added to a new pile.</li>
+			</ol>
+			<p>References: <a href="https://www.epa.gov/sustainable-management-food/composting">EPA (General Composting Information)</a>, <a href="https://www.epa.gov/recycle/composting-home">EPA (Composting at Home)</a></p>
+			<h2>#9: Conserve water.</h2>
+			<p>Despite the fact that our planet has entire oceans to use for water, the type of water that we need at home&mdash;fresh water&mdash;is relativity limited. Water is a finite source, so we need to use less of it to make our water supply last as long as possible. Luckily, there are many ways to conserve water:
+				<ul>
+					<li>Check toilets, faucets, and pipes for leaks. (Volusia County)</li>
+					<li>Don't use your toilet as a wastebasket. (Volusia County)</li>
+					<li>Take shorter showers. (Volusia County)</li>
+					<li>Install more water-efficient shower heads. (Volusia County)</li>
+					<li>Turn off the water when you are shaving or brushing your teeth. (Volusia County)</li>
+					<li>Use dishwashers and washing machines for full loads only. (Volusia County)</li>
+					<li>Use a bowl of water to rinse vegetables, fruits, or dirty dishes instead of the faucet.</li>
+					<li>Water your lawn only if it truly needs it. To check, step on some grass. If it springs back up when you move your foot, it doesn't need water. When you do water it, do it in the early morning and water it long enough for the water to seep into the roots. (Volusia County)</li>
+					<li>Plant drought-resistant trees and plants, and put mulch around the plants. (Volusia County)</li>
+					<li>Use a broom to clean driveways or sidewalks instead of a hose. (Volusia County)</li>
+					<li>Install low-flow toilets. (NJDEP)</li>
+					<li>Upgrade to high-effiency washing machines and dishwashers. (NJDEP)</li>
+					<li>Throw food waste in a compost pile instead of a garbage disposal. (NJDEP)<br>To learn how to compost, refer to the section above by scrolling up or clicking <a href="#compost">here</a>.</li>
+					<li>Check your appliances for leaks. (Prineville)</li>
+					<li>Read your water meter and use it to check for leaks. (Prineville)</li>
+					<li>Use the microwave to defrost frozen foods instead of running water. (Prineville)</li>
+					<li>Wash dishes in the dishwasher instead of by hand. (Prineville)</li>
+				</ul></p>
+			<p>References: <a href="https://www.volusia.org/services/growth-and-resource-management/environmental-management/sustainability-and-resilience/water-conservation/25-ways-to-save-water.stml">Volusia County, Florida</a>, <a href="https://dep.nj.gov/conserve-water/conserve-water-inside-your-home/">New Jersey Department of Environmental Protection (NJDEP)</a>, <a href="https://www.cityofprineville.com/publicworks/page/how-conserve-water-your-home">Prineville, Oregon</a></p>
+			<h2 id="lower_plastic_waste">#10: Lower your plastic waste.</h2>
+			<p>Plastics are extremely dangerous to the environment. Unlike other materials, which eventually decay and decompose, plastic remains plastics, no matter how long you leave it out. Instead, plastic breaks into smaller and smaller pieces until it becomes microplastics&mdash;tiny pieces of plastics that you can barely see. These microplastics have found their way into every portion of the world: in the seas, in wildlife, even in our very bodies. In order to stop this from continuing to occur, we need to reduce our plastic waste. For example:
+				<ul>
+					<li>Use reusable dishes, glasses, and silverware instead of plastic cups and utensils. (EPA)</li>
+					<li>Bring a reusable bag for shopping instead of using plastic bags. (EPA)</li>
+					<li>Try to buy items with minimal packaging. (EPA)</li>
+					<li>Package your lunch in reusable container instead of plastic bags. (EPA)</li>
+					<li>Bring drinks in a reusbale water bottle or thermos instead of disposable bottles or cartons. (EPA)</li>
+					<li>Filter tap water to drink instead of drinking bottled water. (EPA)</li>
+					<li>Maintain and repair plastic products so they don't have to be thrown out and replaced as frequently. (EPA)</li>
+					<li>Donate unwanted plastic items that are in good condition instead of throwing them away. (EPA)</li>
+					<li>Reuse or repurpose plastic items such as toys, water bottles, or containers. (EPA)</li>
+					<li>Avoid using single-use plastics such as straws, coffee-cup lids, plastic wrap, and grocery bags. (NRDC)</li>
+					<li>Avoid cosmetic products with plastic microbeads. (NRDC)</li>
+					<li>Cook at home instead of at restaurants, as no plastic takeout containers are needed for eating at home. (NRDC)</li>
+					<li>Recycle plastics. (NRDC)</li>
+					<li>Purchase items secondhand or borrow items instead of buying new. (NRDC)</li>
+				</ul></p>
+			<p>References: <a href="https://www.epa.gov/plastics/what-you-can-do-reduce-plastic-waste">EPA</a>, <a href="https://www.nrdc.org/stories/10-ways-reduce-plastic-pollution">NRDC</a></p>
+			<h2>Other Miscellaneous Actions and Tips</h2>
+			<ul>
+				<li>Buy regional or locally-grown food instead of more exotic foods. This is because exotic foods are usually transported to countries via plane or ship, causing exotic foods to have a large carbon foootprint. (CBS University)</li>
+				<li>Fly less. Flying produces a lot of greenhouse gas emissions. If you have to fly, try to offset your emissions or combine as many errands into as few trips as possible. (CBS University)</li>
+				<li>Buy clothes made from natural fibers, such as wool or cotton (CBS University).</li>
+				<li>Wash synthetic fibers with cold water. (CBS University)</li>
+				<li>Make coffee at home. (CBS University)</li>
+				<li>If you own a pet, invest in compostable poop bags or eco-friendly cat litter. (CBS University)</li>
+				<li>Use rechargeable batteries instead of single-use ones. (CBS University)</li>
+				<li>Use cloths instead of paper towels. (CBS University)</li>
+				<li>Repair clothes that have holes or stains. (CBS University)</li>
+				<li>Educate yourself on sustainability through TED Talks or podcasts. (CBS University)</li>
+				<li>Use carbon footprint calculators to determine and help you lower your environmental impact. (CBS University)</li>
+				<li>Speak up and advocate for sustainability. (Center for Biological Diversity)</li>
+				<li>Choose organic food. (Center for Biological Diversity)</li>
+				<li>Conserve trees and forests. (TREE Foundation)</li>
+				<li>Plant trees. (TREE Foundation)</li>
+				<li>Support organizations that advocate for sustainability. (TREE Foundation)</li>
+				<li>Spread the word. (TREE Foundation)</li>
+				<li>Buy from local, small businesses. (Johns Hopkins)</li>
+				<li>Select more sustinable cosmetic products. (Johns Hopkins)</li>
+				<li>Make your own cleaning supplies from natural ingredients such as lemon juice, white vinegar, borax, olive oil, or baking soda. (Johns Hopkins)<br>Click <a href="https://gba.org/resources/green-building-methods/interior-solutions/green-cleaning/">here</a> for some recipes.</li>
+				<li>Buy compostable products. (Johns Hopkins)</li>
+				<li>Grow your food yourself. (conservation.org)</li>
+				<li>Unplug your devices when they are not being used. (conservation.org)</li>
+				<li>Keep your current phone for longer and wait on buying a new phone. (conservation.org)</li>
+				<li>Get a solar charger for your phone. (conservation.org)</li>
+				<li>Delete old messages on your smartphone. (conservation.org)</li>
+				<li>Take the stairs instead of the elevator. (conservation.org)</li>
+				<li>Keep your tires inflated, as low tire pressure equates to more fuel needed to move your car. (conservation.org)</li>
+				<li>Avoid the most crowded months when going to a national park or similar natural attraction. (conservation.org)</li>
+				<li>Use bar soap instead of soap in a bottle. (conservation.org)</li>
+				<li>Use reusable coffee cups. (conservation.org)</li>
+				<li>Bring less on flights. (conservation.org)</li>
+				<li>Save paper by printing double-sided instead of single. (conservation.org)</li>
+				<li>Make a portion of your lawn no-mow, and you can add native or edible plants to your no-mow section. (conservation.org)</li>
+				<li>Stay in a sustainable hotel. (conservation.org)</li>
+			</ul>
+			<p>References: <a href="https://www.cbs.de/en/blog/sustainable-living-tips-for-a-more-sustainable-lifestyle">CBS University</a>, <a href="https://www.biologicaldiversity.org/programs/population_and_sustainability/sustainability/live_more_sustainably.html">Center for Biological Diversity</a>, <a href="https://treefoundation.org/education/10-things-you-can-do-to-save-forests/">TREE Foundation</a>, <a href="https://sustainability.jhu.edu/engage/live-sustainably/purchase-responsibly/">Johns Hopkins University</a>, <a href="https://www.conservation.org/act/sustainable-living-tips">conservation.org</a></p>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

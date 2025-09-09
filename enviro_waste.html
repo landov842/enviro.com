@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Waste</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(25,50,165,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="fenviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Waste</h2>
+				<p>A lot of the materials we used are often wasted and thrown away in landfills to rot.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<h2>Waste</h2>
+			<p>We use a lot of materials in our daily lives that end up in the trash can. Many of us throw packaging, unwanted objects, and leftover food straight to the trash can without a care in the world. However, all the stuff that we carelessly throw away have consequences. The majority of our waste ends up in a landfill to slowly rot, releasing greenhouse gases and other pollutants into the air. In fact, researchers estimate that <q>20% of the total methane emissions from human-related sources are produced from open waste landfill sites,</q> landfills that allow greenhouse gases to go into the air and are the majority of landfills in the U.S. (earthday.org). There are many different types of waste, but they are all dangerous to the environment.</p>
+			<h2>Plastic Waste</h2>
+			<p>One of the most dangerous types of waste out there is plastic waste. Unlike other materials, plastic doesn't decompose: instead, it breaks into smaller and smaller pieces until it becomes microplastics, tiny pieces of plastic that you can barely see. These microplastics are very dangerous to wildlife: it is estimated that <q>1,500 different species [have] been found to have consumed toxic plastics and microplastics,</q> slowly poisoning them and wrecking biodiversity (earthday.org). Plastics can cause alterations in wildlife's habitat: <q>as debris accumulates, habitat structure may be modified, light levels may be reduced in underlying waters, and oxygen levels may be depleted</q> (EPA). Furthermore, <q>plastics have the potential to absorb chemicals of concerns from the environment,</q> multiplying the toxicity of plastics (EPA).</p>
+			<h2>Food Waste</h2>
+			<p>Another problematic type of waste is food waste. A lot of food is thrown away in the trash: specifically, <q>up to 40 percent of all food in the United States goes unsold or uneaten ... [with] the majority of it, about 33 million tons, ending up in landfills</q> (NRDC). According to NRDC, food wste can come form a variety of sources:
+				<ul>
+					<li>Farms. Farms are responsible for our food being thrown away&mdash;<q>17 percent of all food waste,</q> specifically (NRDC). Farmers tend to grow a surplus of crops to avoid food shortages or price shocks, but it results in the crops not being used at all and left to wilt. Also, retailers tend to only prefer the best looking crops, so food seen as "ugly" will be thrown away.</li>
+					<li>Food Retail and Services. A lot of food is also thrown away at supermarkets. This is usually because customers tend to pick the newest or freshest foods to buy, leaving the older ones to rot. Restaurants also waste food when people can't finish what they ordered.</li>
+					<li>Homes. The largest source of food waste is at homes. This is often due to not properly storing food, buying too much food, and misunderstanding date labels.</li>
+				</ul></p>
+			<p>Food waste has negative consequences. When food is wasted, all of the land, water, energy, and time spent to create that food is wasted as well. Furthermore, food waste releases a lot of greenhouse gases into the air. Research estimates that <q>wasted food in the United States creates annual greenhouse gas emissions that are equivalent to the impact of 50 million gas-powered cars</q> (NRDC).</p>
+			<h2>Textile waste</h2>
+			<p>Textile waste is the throwing out of used cloth and fabrics. Many of these abandoned clothes end up in landfills to decompose: <q>66% of [discarded textiles] are sent to landfills in the U.S. ... [whereas] only 15% of used textiles are theoretically 'recycled', and of those, up to half are simply shipped abroad to other countries</q> (Boston University). Many of these recipient are poorer countries that do not have access to proper recycling facilities, resulting in much more environmental damage. In Ghana, a common recipient of textile trash, air pollution is caused by textiles that are being burned or left to decompose because they are not wanted or able to be used (Boston University). Furthermore, textile production demands a lot of water: <q>to make a single cotton T-shirt, 2,700 liters of fresh water are required according to estimates, enough to meet one person's drinking needs for 2.5 years</q> (European Parliament). Throwing away textile fabric wastes all that precious freshwater that was used to make those fabrics. Not only that, but modern fabric tends to contain plastic-like synthetic material, so textile waste also releases lots of microplastics&mdash;just <q>a single laundry load of polyester clothes can discharge 700,000 microplastic fibers</q>&mdash;into the air and water.</p>
+			<h2>Electronic Waste</h2>
+			<p>Electronic waste, or e-waste for short, is also dangerous to the environment and our health. E-waste is defined as <q>any discarded product with a battery or plug, and features toxic and hazardous substances such as mercury, lead, chromium, and toxins, that can pose severe risk to human and environmental health</q> (GEN). Because of these toxic chemicals, e-waste can be dangerous, especially if not dealt with safely. These toxic chemicals are usually released when e-waste is disposed of using improper methods, such as landfilling or burning (WHO). When improper methods are used, the toxic pollution are released into the environment, exposing people and wildlife to hazardous substances. Open-air burning, for instance, <q>can expose workers to high levels of contaminants such as lead, mercury, cadmium, and arsenic, which can lead to irreversible health effects, including cancers, miscarriages, neurological damage, and diminished IQs</q> (EPA). Unfortunately, disposing of e-waste improperly is very common: <q>even in the EU, which leads the world in e-waste recycling, just 35% of e-waste is officially reported as properly collected and recycled</q> (GEN). To make matters worse, e-waste from developed countries such as the U.S. is shipped to developing countries that do not have the resources to handle e-waste properly (EPA). Imagine how much e-waste is disposed of improperly in countries that have barely any access to the recycling technology that the EU has!</p>
+			<h2>Healthcare Waste</h2>
+			<p>Healthcare waste, also called medical waste, is thrown out medical equipment from hospitals, labs, and clinics. According to the NLM, there are many types of healthcare waste:
+				<ul>
+					<li>Sharps waste. This type of waste comprises of sharp objects, such as needles, syringes, scalpels, knives, pipettes, and broken glass.</li>
+					<li>Infectious waste. This type of waste consists of objects have came into contact with on contain pathogens, blood, or materials that came from infected patients.</li>
+					<li>Pathological waste. This type of waste comprises of body parts such as organs, bodily tissues, blood, or carcasses.</li>
+					<li>Pharmaceutical waste. This type of waste consists of pharmaceuticals and drugs.</li>
+					<li>Cytotoxic waste. This type of waste contains substances that are mutagenic (causes mutations), carcinogenic (causes cancer), or teratogenic (causes developmental issues in a fetus).</li>
+					<li>Chemical waste. This type of waste contains chemicals, such as batteries or old thermometers.</li>
+					<li>Radioactive waste. This type of waste contains radioactive material.</li>
+					<li>Non-hazardous waste. This type of waste does not have a biological, chemical, physical, or radioactive hazard.</li>
+				</ul></p>
+			<p>The healthcare system is supposed to help protect and saved people's lives, but if waste is not disposed of properly, the healthcare system may be unintentionally harming people. Sharps waste can injure people that touch it, which not only does physical damage but it can <q>increase the likelihood of human immunodeficiency virus (HIV), hepatitis B and C viruses (HBV/HCV), tuberculosis (TB), diphtheria, malaria, syphilis, brucellosis, and other transmissions</q> (NLM). Infectious waste can get into the body if it is not properly managed. Chemical waste can poison people and <q>may cause injury to the eyes, skin, or mucous membranes of the respiratory tract</q> (NLM). Cytotoxic waste can accumulate in wildlife and cause alarming symptoms, including <q>spontaneous abortiions during pregnancy and malformations [seen] among children of females with a history of occupational exposure to anticancer medications</q> (NLM). Radioactive waste can cause tissue destruction and even fatality in more extreme cases. In short, exposure to healthcare waste is dangerous, so we must limit this amount of waste for our safety and health.</p>
+			<h2>Ways to Reduce Waste</h2>
+			<ul>
+				<li>Compost your food scraps (EPA). To learn how to compost, click <a href="enviro_small_solutions#compost">here</a>.</li>
+				<li>After mowing, leave your grass clippings on the lawn instead of bagging them. The clippings will add nutrients to soil instead of rotting in a landfill. (EPA)</li>
+				<li>Have a yard sale for old toys, clothes, appliances, and other possessions you no longer want or need. (EPA)</li>
+				<li>Buy itmes made out of recycled material. (EPA)</li>
+				<li>Reuse old school supplies if they are in good condition. (EPA)</li>
+				<li>Save packaging, colored paper, egg cartons, and whatnot for art projects. (EPA)</li>
+				<li>Pack your lunch in reusable containers instead of disposable ones. (EPA)</li>
+				<li>When buying lunch, only grab what you need. Don't grab too many napkins or ketchup packets. (EPA)</li>
+				<li>Donate old computers and tablets for a school to use. (EPA)</li>
+				<li>Spend less on the holidays. Don't buy too much gifts or food. (EPA)</li>
+				<li>Plan how much you need to buy ahead of time to reduce wasting food. (EPA)</li>
+				<li>Bring reusable bags to hold your groceries. (Addison County)</li>
+				<li>Bring a reusable water bottle to drink from. (Addison County)</li>
+				<li>Use reusbale ceaning rags instead of paper towels. (Addison County)</li>
+				<li>Opt out of paper mail. (Addison County)</li>
+				<li>Use reusable cutlery and real silverware instead of plastic cutlery. (Addison County)</li>
+				<li>Avoid disposable straws. Ask for no straw when placing a drink order, or buy a reusable straw. (Addision County)</li>
+			</ul>
+			<h3>Want to help? Click <a href="enviro_small_solutions.html#recycling">here</a> to learn more about recycling, <a href="enviro_small_solutions.html#compost">here</a> to learn about composting, or <a href="enviro_small_solutions.html#lower_plastic_waste">here</a> to lower your plastic waste.</h3>
+			<p>References: <a href="https://www.earthday.org/how-our-trash-impacts-the-environment/">earthday.org</a>, <a href="https://19january2021snapshot.epa.gov/trash-free-waters/impacts-mismanaged-trash_.html">EPA (Plastic Waste)</a>, <a href="https://www.nrdc.org/stories/food-waste-101">NRDC</a>, <a href="https://www.bu.edu/sph/news/articles/2022/the-aftermath-of-fast-fashion-how-discarded-clothes-impact-public-health-and-the-environment/">Boston University</a>, <a href="https://www.europarl.europa.eu/topics/en/article/20201208STO93327/the-impact-of-textile-production-and-waste-on-the-environment-infographics">European Parliament</a>, <a href="https://www.who.int/news-room/fact-sheets/detail/electronic-waste-(e-waste)">World Health Organization</a>, <a href="https://www.genevaenvironmentnetwork.org/resources/updates/the-growing-environmental-risks-of-e-waste/">Geneva Environmental Network</a>, <a href="https://www.epa.gov/international-cooperation/cleaning-electronic-waste-e-waste">EPA (E-Waste)</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9858835/#abstract1">National Library of Medicine (NLM)</a>, <a href="https://www.epa.gov/recycle/reducing-waste-what-you-can-do">EPA (Reducing Waste)</a>, <a href="https://www.addisoncountyrecycles.org/recycling/reduce-reuse/plastics-reduction">Addison County, Vermont</a></p>
+			<h3>Want to test your knowledge? Click <a href="enviro_waste_quiz.html">here</a> to take the quiz.</h3>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		</table>
+	</body>
+</html>

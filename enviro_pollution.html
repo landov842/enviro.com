@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Enviro|Pollution</title>
+		<style>
+			.navigation {
+    			height:80px;
+    			overflow: visible;
+    			background-color: #00CC51;
+    			max-width: 1200px;
+    			margin: 0 auto;
+    			display:flex;
+    			align-items:center;
+    			z-index:10;
+    		}
+			.navigation img, #homepage_link {
+				height:100%;
+				width:auto;
+			}
+    		.drop_down_menu {
+    			position:relative;
+    			overflow:visible;
+    			height:100%;
+    		}
+      		.drop_down_menu .drop_down_button {
+      			font-size: 15px;
+      			font-family: inherit;
+      			background-color: inherit;
+      			border: none;
+      			outline: none;
+      			color: black;
+      			margin: 0;
+      			padding: 15px;
+      			gap: 8px;
+      			width: 200px;
+    			height:100%;
+    			display:flex;
+    			align-items:center;
+      		}
+      		.drop_down_button img {
+      			width: 20px;
+      			height: 40px;
+      		}
+    		.navigation a:hover,
+    		.drop_down_menu:hover .drop_down_button,
+    		.navigation a.active,
+    		.drop_down_button.active {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+
+    		.drop_down_content {
+    			display: none;
+    			position: absolute;
+    			top:100%;
+    			left:0;
+    			background-color: #00CC51;
+    			padding: 15px;
+    			border-radius: 5px;
+    			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    			z-index: 1;
+    		}
+
+    		.drop_down_content a {
+    			float: none;
+    			color: black;
+    			padding: 5px;
+    			display: block;
+    			text-align: left;
+    		}
+    		
+    		.drop_down_content a:hover {
+    			background-color: #0051CC;
+    			color: white;
+    		}
+    		
+    		.drop_down_menu:hover .drop_down_content {
+    			display: block;
+    		}
+    		
+    		@media screen and (max-width: 768px) {
+    			.navigation,
+    			.drop_down_menu {
+    		    	float: none;
+    		    	width: 100%;
+    		    	text-align: center;
+    			}
+    			.drop_down_button {
+    		    	width: 100%;
+    			}
+    			.drop_down_content {
+    		    	position: static;
+    		    	border-radius: 0;
+    		    	box-shadow: none;
+    			}
+    		}
+    		.caption {
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				color:black;
+				text-align:center;
+				font-size:30px;
+				font-family:Verdana;
+			}
+			.img_head {
+				display:block;
+				width:100%;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			table {
+				width:100%;
+				padding:15px;
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:20px;
+			}
+			.footer {background-color:black; color:#FFFFFF}
+			.footer a {color:rgba(0,255,255,0.7);}
+			.footer td {width:25%;}
+			.table_image {width:25%;}
+			.table_image img {width:100%; border: 1px solid blue;}
+			.article {
+				max-width:1200px;
+				margin-left:auto;
+				margin-right:auto;
+				background-color:rgba(65,65,65,0.2);
+			}
+			.article a {color:blue;}
+			.article h2, .article h3, .article p {
+				padding-left:10px;
+				padding-right:10px;
+			}
+			.section_descriptor {position:relative; text-align:left;}
+			.link_list {list-style-type:none;}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<a href="enviro_homepage.html" title="Go to Homepage" id="homepage_link"><img src="website_logo_temp.png" alt="Website Logo Here">
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="information_icon_new.png" alt="Info Logo Here">Info</button>
+				<div class="drop_down_content">
+					<a href="enviro_environmental_problems.html">Environmental Problems</a>
+					<a href="enviro_pollution.html">Pollution and Greenhouse Gasses</a>
+					<a href="enviro_waste.html">Waste</a>
+					<a href="enviro_deforestation.html">Deforestation</a>
+					<a href="enviro_greenwashing.html">Greenwashing</a>
+					<a href="enviro_myth_v_reality.html">Myth v. Reality</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="question_icon_newer.png" alt="How Can I Help Image Here">How Can I Help?</button>
+				<div class="drop_down_content">
+					<a href="enviro_big_solutions.html">Big Solutions (Things The World Can Do)</a>
+					<a href="enviro_protecting_forests.html">Protecting Forests</a>
+					<a href="enviro_green_infrastructure.html">Green Infrastructure</a>
+					<a href="enviro_renewable_energy.html">Renewable Energy</a>
+					<a href="enviro_regulating_agriculture.html">Regulating Agriculture</a>
+					<a href="enviro_small_solutions.html">Small Solutions (Things You Can Do)</a>
+				</div>
+			</div>
+			<div class="drop_down_menu">
+				<button class="drop_down_button"><img src="quiz_icon.png" alt="Quiz Logo Here"><a href="enviro_take_a_quiz.html">Take a Quiz</a></button>
+				<div class="drop_down_content">
+					<a href="enviro_pollution_quiz.html">Pollution Quiz</a>
+					<a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a>
+					<a href="fenviro_greenwashing_quiz.html">Greenwashing Quiz</a>
+					<a href="enviro_deforestation_quiz.html">Deforestation Quiz</a>
+					<a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a>
+					<a href="enviro_waste_quiz.html">Waste Quiz</a>
+				</div>
+			</div>
+		</div>
+		<div class="section_descriptor">
+			<img src="forest_landscape_lighter.png" alt="Image of Landscape Here" class="img_head">
+			<div class="caption">
+				<h2>Pollution</h2>
+				<p>When we make products or energy, by-products are often dumped into the air or water. This article will guide you on what pollutants are and how they are made and dispersed.<br><small>Image courtesy of <a href="https://www.pexels.com/search/forest%20landscape/">pexels.com</a></small></p>
+			</div>
+		</div>
+		<div class="article">
+			<h2>Pollution</h2>
+			<p>The majority of processes we use to survive, from energy production to transportation to agriculture, produce harmful substances that get released into the air and water&mdash;a process called pollution. What we pollute the atmosphere and oceans with can vary, from tiny gasses to toxic chemicals. In this article, you will learn about the many different types of pollutants there are in the world and where they come from.</p>
+			<h2>Greenhouse Gasses</h2>
+			<p>Greenhouses gasses are gasses that trap heat in the atmosphere, resulting in rising temperatures or climate change. They are a large variety of greenhouse gasses, but the most common are carbon dioxide, methane, nitrous oxide, and fluorinated gasses.</p>
+			<h3>Carbon Dioxide</h3>
+			<p>Carbon dioxide (chemical formula CO<sub>2</sub>) is the main greenhouse gas emitted by human activies. In fact, the EPA estimates that CO<sub>2</sub> made up 80% of all greenhouse gas emissions in the United States in 2022. Carbon dioxide is not a completely synthetic gas: it is actually quite common in the atmosphere and is produced in natural processes. However, human activities&mdash;especially burning fossil fuels&mdash;have resulted in a spate of carbon dioxide being released into the atmosphere. The most common sources of CO<sub>2</sub> emissions are:
+				<ul>
+					<li>Transportation. The burning of fossil fuels to be used to transport people and goods, such as cars, trucks, air planes, and trains, is a hefty source of CO<sub>2</sub>. In fact, in 2022, transportation <q>[accounted] for 35% of total U.S. CO<sub>2</sub> emissions</q> (EPA).</li>
+					<li>Energy Production. Electricity is used to power homes, business, and industries, and fossil fuels are often burned to create that electricity. In 2022, energy production <q>[accounted] for 30% of total U.S. CO<sub>2</sub> emissions</q> (EPA).</li>
+					<li>Industry. Several industrial processes emit carbon dioxide through burning fossil fuels. Some processes also emit CO<sub>2</sub> without combustion, such as in the production of cement, steel, or certain chemicals. The use of fossil fuels for combustion in industrial processes <q>accounted for 16% of total U.S. CO<sub>2</sub> emissions</q> (EPA).</li>
+				</ul></p>
+			<h3>Methane</h3>
+			<p>Methane (chemical formula CH<sub>4</sub>) is another common greenhouse gas. Methane has a shorter lifetime in the atmosphere than CO<sub>2</sub>, but it is also much better at trapping heat, making methane more potent at trapping heat than carbon dioxide. Specifically, the EPA estimates that <q>the comparative impact of CH<sub>4</sub> is 28 times greater than CO<sub>2</sub> over a 100 year period.</q> The most common sources of methane are:
+				<ul>
+					<li>Agriculture. Livestock such as cows, pigs, goats, and sheep often produce methane as a part of their digestive process. Methane is also produce when manure is being stored, managed, or decomposed in a lagoon. (EPA)</li>
+					<li>Energy and Industry. Natural gas and petroleum (oil) systems also produce large amounts of methane. In fact, the EPA estimates that natural gas and oil are the source of 28% of the U.S.'s methane emissions. Methane often gets produces during the production, processing, and use of natural gas and the production and refinement of crude oil. (EPA)</li>
+					<li>Landfills also produce CH<sub>4</sub>. Methane is usually generated when food waste decomposes. (EPA)</li>
+				</ul></p>
+			<h3>Nitrous oxide</h3>
+			<p>Nitrous oxide (chemical formula N<sub>2</sub>O) is a less prevalent greenhouse gas than CO<sub>2</sub>, only <q>[accounting] for 6% of all U.S. greenhouse gas emissions from human activities</q> (EPA). However, despite its relative rarity, nitrous oxide is far more potent than carbon dioxide&mdash;<q>the impact of 1 pound of N<sub>2</sub>O on warming the atmosphere is 265 times that of 1 pound of carbon dioxide</q> (EPA). The most common source of nitrous oxide are:
+				<ul>
+					<li>Agriculture and Land Use. Nitrous oxide is often released during agricultural methods such as fertilizer spraying, manure management, and slash-and-burn tactics&mdash;the cutting and burning of organic material. According to the EPA, agriculture and land use accounted for 75% of the U.S.'s nitrous oxide emissions.</li>
+					<li>Fuel Combustion. Nitrous oxide is emitted when fuels are burnt. The exact is hard to determine, though, as the amount of nitrous oxide released depends on the type of fuel burnt, which combustion technology was used, and the maintenance of the technology used. (EPA)</li>
+					<li>Industry. Nitrous oxide is often produced as a by-product during the production of certain chemicals such as nitric acid (chemical formula HNO<sub>3</sub>), which is used to make synthetic fertilizers. (EPA)</li>
+				</ul></p>
+			<h3>Fluorinated Gases</h3>
+			<p>Fluorinated gases are another large group of greenhouse gases. Unlike other greenhouse gases, though, fluorinated gases originate almost entirely from human activities and have no significant natural sources. While fluorinated gases make up a relatively small portion of greenhouse gas emissions, they have long lifetimes in the atmosphere and have extremely high potencies&mdash;even dwarfing that of nitrous oxide. According to the EPA, the four main types of fluorinated gases are:
+				<ul>
+					<li>Hydrofluorocarbons (HFCs)</li>
+					<li>Perfluorocarbons (PFCs)</li>
+					<li>Nitrogen trifluoride (NF<sub>3</sub>)</li>
+					<li>Sulfur hexafluoride (SF<sub>6</sub>)</li>
+				</ul></p>
+			<p>The most common uses for fluorinated gases are:
+				<ul>
+					<li>Substition for Ozone-Depleting Substances. HFCs are used as refrigerants, aerosol propellants, foam blowing agents, solvents, fire retardants, and more in homes, business, and industry. HFCs are used as a safer replacement for chlorofluorocarbons (CFCs) and hydrochlorofluorocarbons (HCFCs), chemicals that damage the ozone layer. Since HFCs are still potent greenhouse gases, though, the government has passed laws directing the EPA to lower down the use of HFCs. (EPA)</li>
+					<li>Industry. PFCs are produced as a by-product of the production of aluminum. Also, PFCs, NF<sub>3</sub>, and SF<sub>6</sub> are all used in semiconductor manufacturing. (EPA)</li>
+					<li>Transmission of Electricity. SF<sub>6</sub> is used as an insulating gas in electric transmission equipment like circuit breakers. (EPA)</li>
+				</ul></p>
+			<h2>Water Pollution</h2>
+			<p>Wikipedia defines water pollution as <q>the addition of substances or energy forms that directly or indirectly alter the nature of the water body in such a manner that negatively affects its legitimate uses.</q> In other words, water pollution is whenharmful substances are being released into water, contaminating it and preventing it from being used safely. There are a variety of types of water pollutions, including waste, fertilizers, toxic chemicals, oil, and radioactive substances.</p>
+			<h3>Domestic Sewage</h3>
+			<p>One major type of water pollution is domestic sewage. Because feces dumped in the water often contain pathogens, dumping sewage can be a threat to public health (Brittanica). <q>More than 80 percent of the world's wastewater flows back into the environment without being treated or reused,</q> so there is a likelihood that the water we drink is laced with harmful bacteria from human waste (NRDC). This can result in a variety of illnesses, such as:
+				<ul>
+					<li>Gastroentitis, an illness caused when you harmful bacteria or viruses and results in vomiting and diarrhea. (SAS)</li>
+					<li>Skin infections, which causes parts of the skin to become itchy and swollen. (SAS)</li>
+					<li>Ear and eye infections (SAS)</li>
+					<li>Sore throat (SAS)</li>
+					<li>Hepatitis A, which can cause a variety of symptoms, such as a reduced appetite, nausea, vomiting, fever, aches and pains, pale feces, and dark urine. (SAS)</li>
+					<li>E. coli, which is spread through ingesting feces. The symptoms include abdominal pain, diarrhea, and vomiting, but more severe ones can occur. (SAS)</li>
+				</ul></p>
+			<p>Furthermore, when the organic waste is being decomposed by bacteria, a lot of oxygen gets up in the water, so organisms like fish that require large amounts of oxygen to survive will perish (Brittanica). Also, according to Brittanica, sewage can contain medicinal compounds, compounds that harm aquatic life. Dumping domestic sewage into bodies of water can also cause eutrophication, a process where a body of water <q>changes from a clean, clear condition, with a relatively low concentration of dissolved nutrients and a balanced aquatic community, to a nutrient-rich, algae-filled state and thence to an oxygen-deficient, waste-filled condition</q> (Brittanica).</p>
+			<h3>Solid Waste</h3>
+			<p>Another type of water pollution is the improper disposal of solid waste--trash, garbage, and electronic waste. Large amounts of solid wate in bodies of water are detrimental to wildlife, as types of waste such as plastics or electronics can release harmful chemicals that can poison wildlife. Plastic waste is especially dangerous, as it does not decompose like other materials. Instead, plastic breaks into smaller and smaller pieces until it becomes microplastics, <q>which are less than 5 mm (0.2 inch) in length and are not biodegradable</q> (Brittanica). This results in microplastics being found in aquatic life, seafood, and even drinking water.</p>
+			<h3>Agricultural Waste</h3>
+			<p>One of the biggest causes of water pollution is agricultural waste. In fact, <q>agricultural pollution is the top source of contamination in rivers and streams, the second-biggest in wetlands, and the third main source in lakes</q> in the United States (NRDC). Whenever it rains on a farm, fertilizers, pesticides, and animal waste end up getting washed into our waterways, putting chemicals and pathogens into our water. This can cause many problems, including nutrient pollution, a process when excess nutrients from fertilizers get into bodies of water and cause algae to grow excessively in the water, potentially harming people and wildlife.</p>
+			<h3>PFAS (also called forever chemicals)</h3>
+			<p>PFAS, short for per- and polyfluoroalkyl substances, are a group of synthetic chemicals that are often used in products that resist water, stains, grease, and heat. However, they are often dumped into bodies of water, either intentionally or unintentionally, in industrial waste. Once coming to use with the invention of Teflon, PFAS are currently used in a variety of industries, including:
+				<ul>
+					<li>Nylon</li>
+					<li>Carpets</li>
+					<li>Cosmetics, like lipstick, mascara, and nail polish</li>
+					<li>Food packaging</li>
+					<li>Adhesives</li>
+					<li>Electric Wire Insulation</li>
+				</ul></p>
+			<p>Despite their widespread use in industry, PFAS have raised health and environmental concerns because they last longer than other compounds in water--earning them the nickname "forever chemicals." Because of this, they have been found in water in remote areas--even in Antartica. To make matters worse, they are very dangerous when ingested. Wikipedia lists some of the more severe symptoms as follows:
+				<ul>
+					<li>Pregnancy and fertility issues</li>
+					<li>Human developmental issues</li>
+					<li>Liver problems</li>
+					<li>Cancers, including breast and kidney cancer</li>
+					<li>Hypercholesterolemia, <q>a lipid disorder in which your low-density lipoprotein (LDL), or bad cholesterol is too high[, making] fat collect in your arteries, which puts you at a higher risk of heart attack and stroke</q> (Cleveland Clinic)</li>
+					<li>Ulcerative colitis, which <q>causes inflammation and sores, called ulcers, in part of the digestive tract</q>, resulting in diarrhea, belly pain, weight loss, and other symptoms (Mayo Clinic)</li>
+					<li>Abnormalities in the thyroid, an organ that produces hormones regulating heart rate, body temperature, and other vital functions</li>
+				</ul></p>
+			<p>Because of these dangerous effects, actions have been taken to lower or ban the use of PFAS. According to Wikipedia, these governments have taken action against PFAS:
+				<ul>
+					<li>Canada. In 2008, Canada has banned many products containing PFOS, a subset of PFAS. Furthermore, Health Canada, a governmental department in charge of health, has puts limits on the concentration of certain PFAS in drinking water.</li>
+					<li>New Zealand. New Zealand has banned the use of PFAS in cosmetics starting December 31, 2026.</li>
+					<li>European Union. In 2019, the European Union has begun to develop a plan to eliminate all uses of PFAS that are not strictly necessary. The proposal was submitted on January 2023, and eighteen months later, it will enter into force.</li>
+					<li>United States. Some PFAS are no longer manufactured in the United States through a phase-out program from 2010 to 2015. Furthermore, the EPA has published health advisories on certain types of PFAS while also placing and lowering safety thresholds on certain PFAS. The most recent action the EPA has taken on PFAS was a drinking water rule placed on April 2024 saying that within three years, public water systems must remove six PFAS--PFOA, PFOS, GenX, PFBS, PFNA, and PFHxS--out of drinking water to near-zero levels. State actions have also taken place: <ul>
+						<li>California banned PFAS for use in food packaging and children's products and required PFAS cookware to have a warning label.</li>
+						<li>Maine has banned PFAS in all products by 2030, except when PFAS are strictly necessary.</li>
+						<li>Michigan has created the Michigan PFAS Action Response Team to investigate and address PFAS contaminations in the state.</li>
+						<li>Minnesota has banned PFAS in severall categories of products, including food packaging, carpets, cleaning products, dental floss, cosmetics, children's products, and furniture.</li>
+						<li>New Jersey has filed lawsuits against DuPont, Chemours, and 3M over PFAS.</li>
+					</ul></li>
+				</ul></p>
+			<h3>Thermal pollution</h3>
+			<p>Another type of pollution, is thermal pollution, <q>the degradation of water quality by any process that changes ambient water temperature</q> (Wikipedia). In other words, thermal pollution is a rise or drop in water temperature caused by human activities. One of the most common source of thermal pollution is power plants, where water is often used as a coolant. Other common sources of thermal pollution are reservoirs and urban runoff. When water at an elevated temperature arrives at an aquatic ecosystem, the dissolved oxygen tends to decrease, suffocating life forms that need the oxygen to survive (Wikipedia). Furthermore, thermal pollution can result in algae blooms due to an increase in growth rate in elevated temperatures (Wikipedia). In extreme scenarios, excessive heat can denature or deform enzymes in aquatic organisms, preventing them from getting the nutrition they need.</p>
+			<p>References: <a href="https://en.wikipedia.org/wiki/Water_pollution">Wikipedia (Water Pollution)</a>, <a href="https://www.epa.gov/ghgemissions/carbon-dioxide-emissions">EPA (Carbon Dioxide Emissions)</a>, <a href="https://www.epa.gov/ghgemissions/methane-emissions">EPA (Methane Emissions)</a>, <a href="https://www.epa.gov/ghgemissions/nitrous-oxide-emissions">EPA (Nitrous Oxide Emissions)</a>, <a href="https://www.epa.gov/ghgemissions/fluorinated-gas-emissions">EPA (Fluorinated Gas Emissions), <a href="https://www.britannica.com/science/water-pollution">Brittanica</a>, <a href="https://www.nrdc.org/stories/water-pollution-everything-you-need-know#causes">NRDC</a>, <a href="https://en.wikipedia.org/wiki/PFAS">Wikipedia (PFAS)</a>, <a href="https://my.clevelandclinic.org/health/diseases/23921-hypercholesterolemia">Cleveland Clinic</a>, <a href="https://www.mayoclinic.org/diseases-conditions/ulcerative-colitis/symptoms-causes/syc-20353326">Mayo Clinic</a>, <a href="https://en.wikipedia.org/wiki/Thermal_pollution">Wikipedia</a>, <a href="https://www.sas.org.uk/water-quality/water-quality-facts-and-figures/the-risks-of-mixing-with-sewage/">Surfers Against Sewage (SAS)</a></p>
+			<h3>Want to test your knowledge? Click <a href="enviro.html">here</a> to go to the quiz.</h3>
+		</div>
+		<table class="footer">
+			<tr>
+				<td class="table_image">
+					<a href="enviro_homepage.html" title="Go To Homepage"><img src="website_logo_temp.png" alt="Website Logo Here"></a>
+				</td>
+				<td>
+					Info: <br>
+					<ul class="link_list">
+						<li><a href="enviro_environmental_problems.html">Environmental Problems</a><ul class="link_list">
+							<li><a href="enviro_pollution.html">Pollution</a></li>
+							<li><a href="enviro_waste.html">Waste</a></li>
+							<li><a href="enviro_deforestation.html">Deforestation</a></li>
+							<li><a href="enviro_greenwashing.html">Greenwashing</a></li>
+						</ul></li>
+						<li><a href="enviro_myth_v_reality.html">Myth v. Reality</a></li>
+					</ul>
+				</td>
+				<td>
+					How Can I Help? <br>
+					<ul class="link_list">
+						<li><a href="enviro_big_solutions.html">Big Solutions</a><ul class="link_list">
+							<li><a href="enviro_protecting_forests.html">Protecting Forests</a></li>
+							<li><a href="enviro_green_infrastructure.html">Green Infrastructure</a></li>
+							<li><a href="enviro_renewable_energy.html">Renewable Energy</a></li>
+							<li><a href="enviro_regulating_agriculture.html">Regulating Agriculture</a></li>
+						</ul></li>
+						<li><a href="enviro_small_solutions.html">Small Solutions</a></li>
+					</ul>
+				</td>
+				<td>
+					<a href="enviro_take_a_quiz.html">Take a Quiz</a><br>
+					<ul class="link_list">
+						<li><a href="enviro_pollution_quiz.html">Pollution Quiz</a></li>
+						<li><a href="enviro_renewable_energy_quiz.html">Renewable Energy Quiz</a></li>
+						<li><a href="enviro_greenwashing_quiz.html">Greenwashing Quiz</a></li>
+						<li><a href="enviro_deforestation_quiz.html">Deforestation Quiz</a></li>
+						<li><a href="enviro_green_infrastructure_quiz.html">Green Infrastructure Quiz</a></li>
+						<li><a href="enviro_waste_quiz.html">Waste Quiz</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
